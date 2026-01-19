@@ -14,6 +14,7 @@
         --card: #ffffff;
       }
 
+      /* RESET */
       * {
         box-sizing: border-box;
       }
@@ -42,6 +43,7 @@
         z-index: 9999;
       }
 
+      /* HEADER */
       header {
         background: var(--green);
         color: #fff;
@@ -58,9 +60,9 @@
         margin: 6px auto;
       }
 
+      /* HERO CARD GLOBAL */
       .hero-card {
         max-width: 420px;
-        margin: -60px auto 30px;
         background: #fff;
         border-radius: 18px;
         padding: 18px;
@@ -72,8 +74,10 @@
         width: 100%;
         border-radius: 14px;
         margin-bottom: 16px;
+        object-fit: cover;
       }
 
+      /* BOTÓN */
       .cta-btn {
         display: block;
         width: 100%;
@@ -88,12 +92,19 @@
         text-align: center;
       }
 
+      /* HERO CARD PRINCIPAL */
+      body > .hero-card {
+        margin: -60px auto 30px;
+      }
+
+      /* SECCIÓN */
       section {
         max-width: 900px;
         margin: auto;
         padding: 16px;
       }
 
+      /* CARD GENERAL */
       .card {
         background: #fff;
         border-radius: 16px;
@@ -102,11 +113,13 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       }
 
+      /* TÍTULOS */
       h2 {
         text-align: center;
         color: var(--orange-dark);
       }
 
+      /* LISTAS */
       ul {
         list-style: none;
         padding: 0;
@@ -115,6 +128,7 @@
       li {
         padding-left: 28px;
         position: relative;
+        margin-bottom: 8px;
       }
 
       li::before {
@@ -123,7 +137,44 @@
         left: 0;
       }
 
-      /* FAQ CORREGIDO */
+      /* ===============================
+   GRID RESPONSIVE HERO-CARDS
+   =============================== */
+
+      .card:has(.hero-card) {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      /* TABLET → 2 */
+      @media (min-width: 600px) {
+        .card:has(.hero-card) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* DESKTOP → 3 */
+      @media (min-width: 900px) {
+        .card:has(.hero-card) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* Ajustes internos */
+      .card .hero-card {
+        max-width: 100%;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card .hero-card img {
+        flex-grow: 1;
+      }
+
+      /* FAQ */
       .faq {
         background: #fff;
         border-radius: 18px;
@@ -154,6 +205,7 @@
         background: #fff;
       }
 
+      /* FOOTER */
       footer {
         background: #222;
         color: #ccc;
@@ -166,7 +218,7 @@
 
   <body>
     <div class="counter-fixed">
-      🔥 Más de <span id="counter">103</span> familias usando libros educativos
+      🔥 Más de <span id="counter"></span> familias usando libros educativos
     </div>
 
     <header>
@@ -204,6 +256,21 @@
           </li>
         </ul>
       </div>
+
+      <div class="card">
+        <div class="hero-card">
+          <img src="../assets/portada2.jpg" alt="Animales por Hábitat" />
+        </div>
+        <div class="hero-card">
+          <img src="../assets/portada.jpg" alt="Animales por Hábitat" />
+        </div>
+        <div class="hero-card">
+          <img src="../assets/portada.jpg" alt="Animales por Hábitat" />
+        </div>
+      </div>
+      <br />
+      <a href="#" class="cta-btn">👉 Quiero el libro para mi hijo</a>
+      <br />
       <div class="card">
         <h2>2. ¿Qué hace este libro por ti y por tu hijo?</h2>
         <ul>
@@ -342,6 +409,17 @@
             answer.style.display === "block" ? "none" : "block";
         });
       });
+
+      const counterNumber = Math.floor(Math.random() * 1000);
+      document.querySelector("#counter").textContent = counterNumber;
+
+      setInterval(() => {
+        const current = parseInt(
+          document.querySelector("#counter").textContent,
+          10,
+        );
+        document.querySelector("#counter").textContent = current + 1;
+      }, 10000);
     </script>
   </body>
 </html>
