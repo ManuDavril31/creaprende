@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
         --orange: #f7931e;
         --orange-dark: #e87400;
         --green: #27ae60;
-        --bg: #f6f6f6;
+        --bg: #3a3f45;
         --card: #ffffff;
       }
 
@@ -20,11 +20,27 @@
 
       body {
         margin: 0;
+        padding-top: 54px; /* 👈 SOLO para el contador */
         font-family: "Segoe UI", Arial, sans-serif;
         background: var(--bg);
         color: #333;
         line-height: 1.6;
         font-size: clamp(16px, 2.5vw, 18px);
+      }
+
+      /* ===== CONTADOR FIXED (NUEVO) ===== */
+      .counter-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: var(--green);
+        color: #fff;
+        text-align: center;
+        padding: 10px 12px;
+        font-size: 1.05rem;
+        font-weight: 700;
+        z-index: 9999;
       }
 
       /* BARRA SUPERIOR */
@@ -38,7 +54,7 @@
 
       /* HERO */
       header {
-        background: var(--orange);
+        background: var(--green);
         color: #fff;
         text-align: center;
         padding: 32px 16px 80px;
@@ -75,9 +91,10 @@
 
       /* BOTONES */
       .cta-btn {
-        display: inline-block;
+        display: block; /* cambia de inline-block a block */
         width: 100%;
         max-width: 320px;
+        margin: 0 auto; /* 👈 centra el botón */
         background: linear-gradient(135deg, var(--orange), var(--orange-dark));
         color: #fff;
         padding: 14px 22px;
@@ -86,6 +103,7 @@
         font-weight: 800;
         box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
         animation: pulse 2.5s infinite;
+        text-align: center;
       }
 
       @keyframes pulse {
@@ -113,6 +131,7 @@
         color: var(--orange-dark);
         margin-bottom: 10px;
         font-size: clamp(1.2rem, 4vw, 1.45rem);
+        text-align: center;
       }
 
       /* LISTAS */
@@ -171,7 +190,6 @@
         font-size: 0.8rem;
       }
 
-      /* 📱 AJUSTES EXTRA MÓVIL */
       @media (max-width: 480px) {
         .hero-card {
           margin-top: -40px;
@@ -185,9 +203,15 @@
   </head>
 
   <body>
+    <!-- CONTADOR NUEVO -->
+    <div class="counter-fixed">
+      🔥 Más de <span id="counter">100</span> familias usando libros educativos
+    </div>
+
+    <!-- BARRA ORIGINAL
     <div class="top-bar">
       ✔ Más de 10.000 familias usando libros educativos sin pantallas
-    </div>
+    </div> -->
 
     <header>
       <h1>🐾 Animales por Hábitat – Libro Educativo para Colorear</h1>
@@ -212,23 +236,25 @@
         alt="Animales por Hábitat"
         style="width: 100%; height: 100%; object-fit: cover"
       />
-      <!-- <div class="hero-img">IMAGEN DEL LIBRO</div> -->
       <a href="#" class="cta-btn">👉 Quiero el libro para mi hijo</a>
     </div>
 
     <section>
       <div class="card">
         <h2>1. ¿Qué estás comprando exactamente?</h2>
-        <p>
-          Estás adquiriendo un ebook educativo imprimible diseñado especialmente
-          para niños de 4 a 8 años, donde aprenderán qué animales existen y en
-          qué hábitats viven, a través del juego, el color y la exploración.
-        </p>
-        <p>No es solo un libro para colorear:</p>
-        <p>
-          es una experiencia de aprendizaje activo, sencilla y efectiva, que
-          puedes usar tanto en casa como en el aula.
-        </p>
+        <ul>
+          <li>
+            Estás adquiriendo un ebook educativo imprimible diseñado
+            especialmente para niños de 4 a 8 años, donde aprenderán qué
+            animales existen y en qué hábitats viven, a través del juego, el
+            color y la exploración.
+          </li>
+          <li>No es solo un libro para colorear:</li>
+          <li>
+            Es una experiencia de aprendizaje activo, sencilla y efectiva, que
+            puedes usar tanto en casa como en el aula.
+          </li>
+        </ul>
       </div>
 
       <div class="card">
@@ -264,19 +290,16 @@
         <h2>4. ¿Quién más ya lo está usando?</h2>
         <div class="testimonials">
           <div class="testimonial">
-            🗣️ “A mi hijo le encanta. Aprende mientras colorea.”<br /><strong
-              >— Laura, mamá</strong
-            >
+            🗣️ “A mi hijo le encanta. Aprende mientras colorea.”<br />
+            <strong>— Laura, mamá</strong>
           </div>
           <div class="testimonial">
-            🗣️ “Lo uso en clase y los niños participan felices.”<br /><strong
-              >— Ana, maestra</strong
-            >
+            🗣️ “Lo uso en clase y los niños participan felices.”<br />
+            <strong>— Ana, maestra</strong>
           </div>
           <div class="testimonial">
-            🗣️ “Excelente inversión para la casa.”<br /><strong
-              >— Carlos, papá</strong
-            >
+            🗣️ “Excelente inversión para la casa.”<br />
+            <strong>— Carlos, papá</strong>
           </div>
         </div>
       </div>
@@ -365,5 +388,15 @@
       © 2026 – Animales por Hábitat<br />
       Educación con amor, creatividad y conciencia 💚
     </footer>
+
+    <!-- SCRIPT CONTADOR -->
+    <script>
+      let count = 102;
+      const counter = document.getElementById("counter");
+      setInterval(() => {
+        count++;
+        counter.textContent = count.toLocaleString("es-ES");
+      }, 5000);
+    </script>
   </body>
 </html>
