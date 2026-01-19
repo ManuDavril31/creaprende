@@ -10,7 +10,7 @@
         --orange: #f7931e;
         --orange-dark: #e87400;
         --green: #27ae60;
-        --bg: #3a3f45;
+        --bg: #b1bac5;
         --card: #ffffff;
       }
 
@@ -20,7 +20,7 @@
 
       body {
         margin: 0;
-        padding-top: 54px; /* 👈 SOLO para el contador */
+        padding-top: 54px;
         font-family: "Segoe UI", Arial, sans-serif;
         background: var(--bg);
         color: #333;
@@ -28,7 +28,7 @@
         font-size: clamp(16px, 2.5vw, 18px);
       }
 
-      /* ===== CONTADOR FIXED (NUEVO) ===== */
+      /* CONTADOR */
       .counter-fixed {
         position: fixed;
         top: 0;
@@ -37,22 +37,11 @@
         background: var(--green);
         color: #fff;
         text-align: center;
-        padding: 10px 12px;
-        font-size: 1.05rem;
+        padding: 10px;
         font-weight: 700;
         z-index: 9999;
       }
 
-      /* BARRA SUPERIOR */
-      .top-bar {
-        background: var(--green);
-        color: #fff;
-        text-align: center;
-        padding: 8px 12px;
-        font-size: 0.85rem;
-      }
-
-      /* HERO */
       header {
         background: var(--green);
         color: #fff;
@@ -62,20 +51,17 @@
 
       header h1 {
         font-size: clamp(1.8rem, 5vw, 2.4rem);
-        margin-bottom: 10px;
       }
 
       header p {
         max-width: 760px;
         margin: 6px auto;
-        font-size: clamp(0.95rem, 3vw, 1.1rem);
       }
 
-      /* HERO CARD */
       .hero-card {
         max-width: 420px;
         margin: -60px auto 30px;
-        background: var(--card);
+        background: #fff;
         border-radius: 18px;
         padding: 18px;
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
@@ -84,35 +70,24 @@
 
       .hero-card img {
         width: 100%;
-        height: auto;
         border-radius: 14px;
         margin-bottom: 16px;
       }
 
-      /* BOTONES */
       .cta-btn {
-        display: block; /* cambia de inline-block a block */
+        display: block;
         width: 100%;
         max-width: 320px;
-        margin: 0 auto; /* 👈 centra el botón */
+        margin: 0 auto;
         background: linear-gradient(135deg, var(--orange), var(--orange-dark));
         color: #fff;
-        padding: 14px 22px;
+        padding: 14px;
         border-radius: 12px;
         text-decoration: none;
         font-weight: 800;
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-        animation: pulse 2.5s infinite;
         text-align: center;
       }
 
-      @keyframes pulse {
-        50% {
-          transform: scale(1.05);
-        }
-      }
-
-      /* SECCIONES */
       section {
         max-width: 900px;
         margin: auto;
@@ -120,7 +95,7 @@
       }
 
       .card {
-        background: var(--card);
+        background: #fff;
         border-radius: 16px;
         padding: 18px;
         margin-bottom: 18px;
@@ -128,13 +103,10 @@
       }
 
       h2 {
-        color: var(--orange-dark);
-        margin-bottom: 10px;
-        font-size: clamp(1.2rem, 4vw, 1.45rem);
         text-align: center;
+        color: var(--orange-dark);
       }
 
-      /* LISTAS */
       ul {
         list-style: none;
         padding: 0;
@@ -143,7 +115,6 @@
       li {
         padding-left: 28px;
         position: relative;
-        margin-bottom: 8px;
       }
 
       li::before {
@@ -152,36 +123,37 @@
         left: 0;
       }
 
-      /* TESTIMONIOS */
-      .testimonials {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 14px;
-      }
-
-      .testimonial {
-        background: #fff;
-        border-radius: 14px;
-        padding: 14px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      }
-
-      /* FAQ */
+      /* FAQ CORREGIDO */
       .faq {
-        background: #fdfdfd;
+        background: #fff;
         border-radius: 18px;
-        padding: 18px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        padding: 22px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
       }
 
       .faq-item {
-        background: #fff;
         border-radius: 12px;
-        padding: 14px;
         margin-bottom: 10px;
+        border: 1px solid #eee;
+        overflow: hidden;
       }
 
-      /* FOOTER */
+      .faq-question {
+        padding: 14px 16px;
+        background: #f8f8f8;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .faq-answer {
+        display: none;
+        padding: 14px 16px;
+        background: #fff;
+      }
+
       footer {
         background: #222;
         color: #ccc;
@@ -189,29 +161,13 @@
         padding: 16px;
         font-size: 0.8rem;
       }
-
-      @media (max-width: 480px) {
-        .hero-card {
-          margin-top: -40px;
-        }
-
-        .cta-btn {
-          font-size: 1rem;
-        }
-      }
     </style>
   </head>
 
   <body>
-    <!-- CONTADOR NUEVO -->
     <div class="counter-fixed">
-      🔥 Más de <span id="counter">100</span> familias usando libros educativos
+      🔥 Más de <span id="counter">103</span> familias usando libros educativos
     </div>
-
-    <!-- BARRA ORIGINAL
-    <div class="top-bar">
-      ✔ Más de 10.000 familias usando libros educativos sin pantallas
-    </div> -->
 
     <header>
       <h1>🐾 Animales por Hábitat – Libro Educativo para Colorear</h1>
@@ -220,22 +176,14 @@
         años
       </p>
       <p>
-        Un libro pensado para que los niños aprendan jugando, desarrollen su
-        creatividad y se conecten con el mundo natural, mientras se alejan de
-        las pantallas.
+        Un libro pensado para que los niños aprendan jugando y desarrollen su
+        creatividad.
       </p>
-      <p>
-        Ideal para padres, madres y docentes que buscan educación de calidad,
-        práctica y amorosa.
-      </p>
+      <p>Ideal para padres, madres y docentes.</p>
     </header>
 
     <div class="hero-card">
-      <img
-        src="./assets/portada.jpg"
-        alt="Animales por Hábitat"
-        style="width: 100%; height: 100%; object-fit: cover"
-      />
+      <img src="./assets/portada.jpg" alt="Animales por Hábitat" />
       <a href="#" class="cta-btn">👉 Quiero el libro para mi hijo</a>
     </div>
 
@@ -256,7 +204,6 @@
           </li>
         </ul>
       </div>
-
       <div class="card">
         <h2>2. ¿Qué hace este libro por ti y por tu hijo?</h2>
         <ul>
@@ -268,7 +215,6 @@
         </ul>
         <p>💛 Menos pantallas, más aprendizaje real.</p>
       </div>
-
       <div class="card">
         <h2>3. ¿Por qué puedes confiar en este libro?</h2>
         <p>
@@ -285,7 +231,6 @@
           Todo presentado de forma clara, amable y atractiva para los niños.
         </p>
       </div>
-
       <div class="card">
         <h2>4. ¿Quién más ya lo está usando?</h2>
         <div class="testimonials">
@@ -303,7 +248,6 @@
           </div>
         </div>
       </div>
-
       <div class="card">
         <h2>5. ¿Qué incluye el libro?</h2>
         <ul>
@@ -314,7 +258,6 @@
           <li>Actividades extras</li>
         </ul>
       </div>
-
       <div class="card">
         <h2>6. ¿Cuánto cuesta?</h2>
         <p>El valor educativo es alto, pero su precio es accesible.</p>
@@ -324,34 +267,28 @@
           <li>Impresión ilimitada</li>
         </ul>
       </div>
-
       <div class="card">
         <h2>7. ¿Cómo es el pago?</h2>
         <p>💳 Pago único y seguro.</p>
         <p>📥 Descarga inmediata.</p>
       </div>
-
       <div class="card">
         <h2>8. ¿Qué garantía tienes?</h2>
         <p>Garantía de satisfacción.</p>
         <p>💚 Aprender sin pantallas empieza hoy.</p>
       </div>
-
       <div class="card">
         <h2>9. ¿Qué pasa si no lo compras ahora?</h2>
         <p>Más pantallas, menos creatividad y menos aprendizaje activo.</p>
       </div>
-
       <div class="card">
         <h2>10. ¿Cómo obtener resultados rápido?</h2>
         <p>📥 Descárgalo • 🖨️ Imprímelo • 🖍️ Entrégaselo a tu hijo</p>
       </div>
-
       <div class="card">
         <h2>11. ¿Cómo puedes contactarnos?</h2>
         <p>📩 soporte@tulibroeducativo.com</p>
       </div>
-
       <div class="card">
         <h2>12. ¿Qué debes hacer ahora?</h2>
         <p>Regálale a tu hijo aprendizaje real y creativo.</p>
@@ -362,24 +299,32 @@
         <h2>❓ Preguntas Frecuentes</h2>
 
         <div class="faq-item">
-          <strong>¿Edad recomendada?</strong>
-          <p>De 4 a 8 años.</p>
+          <div class="faq-question">¿Edad recomendada? <span>+</span></div>
+          <div class="faq-answer">De 4 a 8 años.</div>
         </div>
+
         <div class="faq-item">
-          <strong>¿Es imprimible?</strong>
-          <p>Sí, puedes imprimirlo todas las veces que quieras.</p>
+          <div class="faq-question">¿Es imprimible? <span>+</span></div>
+          <div class="faq-answer">
+            Sí, puedes imprimirlo todas las veces que quieras.
+          </div>
         </div>
+
         <div class="faq-item">
-          <strong>¿Sirve para colegios?</strong>
-          <p>Sí, es perfecto para uso educativo.</p>
+          <div class="faq-question">¿Sirve para colegios? <span>+</span></div>
+          <div class="faq-answer">Sí, es perfecto para uso educativo.</div>
         </div>
+
         <div class="faq-item">
-          <strong>¿Necesita internet?</strong>
-          <p>No, se usa sin conexión.</p>
+          <div class="faq-question">¿Necesita internet? <span>+</span></div>
+          <div class="faq-answer">No, se usa sin conexión.</div>
         </div>
+
         <div class="faq-item">
-          <strong>¿Puedo usarlo con varios niños?</strong>
-          <p>Sí, uso ilimitado.</p>
+          <div class="faq-question">
+            ¿Puedo usarlo con varios niños? <span>+</span>
+          </div>
+          <div class="faq-answer">Sí, uso ilimitado.</div>
         </div>
       </div>
     </section>
@@ -389,14 +334,14 @@
       Educación con amor, creatividad y conciencia 💚
     </footer>
 
-    <!-- SCRIPT CONTADOR -->
     <script>
-      let count = 102;
-      const counter = document.getElementById("counter");
-      setInterval(() => {
-        count++;
-        counter.textContent = count.toLocaleString("es-ES");
-      }, 5000);
+      document.querySelectorAll(".faq-question").forEach((q) => {
+        q.addEventListener("click", () => {
+          const answer = q.nextElementSibling;
+          answer.style.display =
+            answer.style.display === "block" ? "none" : "block";
+        });
+      });
     </script>
   </body>
 </html>
