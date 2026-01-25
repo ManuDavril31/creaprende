@@ -287,12 +287,26 @@
         50% { opacity: 0.5; }
       }
 
-      /* HÁBITATS SHOWCASE */
+      /* HÁBITATS SHOWCASE - Para hábitats pequeños */
       .habitats-showcase {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 18px;
         margin: 32px 0;
+      }
+
+      /* GALLERY PREVIEW - Para vista interior (2 columnas desktop, 1 mobile) */
+      .gallery-preview {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin: 32px 0;
+      }
+
+      @media (min-width: 768px) {
+        .gallery-preview {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
 
       .habitat-box {
@@ -639,7 +653,7 @@
       <!-- IMÁGENES PREVIEW -->
       <div class="card" style="text-align: center;">
         <h2>Echa un Vistazo al Interior 👀</h2>
-        <div class="habitats-showcase" style="margin-top: 28px;">
+        <div class="gallery-preview" style="margin-top: 28px;">
           <div class="habitat-box">
             <img src="../assets/portada2.jpg" alt="Muestra 1" style="width: 100%; border-radius: 14px; margin-bottom: 0;">
           </div>
@@ -650,7 +664,7 @@
             <img src="../assets/sopa-letras.png" alt="Muestra 3" style="width: 100%; border-radius: 14px; margin-bottom: 0;">
           </div>
           <div class="habitat-box">
-            <img src="../assets/stikers.png" alt="Muestra 3" style="width: 100%; border-radius: 14px; margin-bottom: 0;">
+            <img src="../assets/stikers.png" alt="Muestra 4" style="width: 100%; border-radius: 14px; margin-bottom: 0;">
           </div>
         </div>
       </div>
