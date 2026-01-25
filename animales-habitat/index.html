@@ -95,6 +95,28 @@
         text-decoration: none;
         font-weight: 800;
         text-align: center;
+        animation: pulse-infinite 2s infinite;
+        box-shadow: 0 6px 16px rgba(247, 147, 30, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .cta-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px rgba(247, 147, 30, 0.5);
+        animation-play-state: paused;
+      }
+
+      /* Animación de pulso */
+      @keyframes pulse-infinite {
+        0% {
+          box-shadow: 0 0 0 0 rgba(247, 147, 30, 0.7);
+        }
+        50% {
+          box-shadow: 0 0 0 10px rgba(247, 147, 30, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(247, 147, 30, 0);
+        }
       }
 
       /* HERO CARD PRINCIPAL */
@@ -278,7 +300,9 @@
 
     <div class="hero-card">
       <img src="../assets/portada.jpg" alt="Animales por Hábitat" />
-      <a href="#" class="cta-btn">👉 Quiero el libro para mi hijo</a>
+      <div style="text-align: center;">
+        <a href="#" class="cta-btn">👉 Quiero el libro para mi hijo</a>
+      </div>
     </div>
 
     <section>
@@ -402,7 +426,9 @@
       <div class="card">
         <h2>12. ¿Qué debes hacer ahora?</h2>
         <p>Regálale a tu hijo aprendizaje real y creativo.</p>
-        <a href="#" class="cta-btn">👉 Descargar ahora el libro educativo</a>
+        <div style="text-align: center; margin-top: 20px;">
+          <a href="#" class="cta-btn">👉 Descargar ahora el libro educativo</a>
+        </div>
       </div>
 
       <div class="faq">
