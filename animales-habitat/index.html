@@ -79,13 +79,11 @@
 
       /* BOTÓN */
       .cta-btn {
-        display: block;
-        width: 100%;
-        max-width: 320px;
-        margin: 0 auto;
+        display: inline-block;
+        max-width: 420px;
+        padding: 14px 32px;
         background: linear-gradient(135deg, var(--orange), var(--orange-dark));
         color: #fff;
-        padding: 14px;
         border-radius: 12px;
         text-decoration: none;
         font-weight: 800;
@@ -145,6 +143,7 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
+        justify-items: center;
       }
 
       /* TABLET → 2 */
@@ -257,7 +256,7 @@
         </ul>
       </div>
 
-      <div class="card">
+      <div class="card" style="text-align: center;">
         <div class="hero-card">
           <img src="../assets/portada2.jpg" alt="Animales por Hábitat" />
         </div>
@@ -267,10 +266,11 @@
         <div class="hero-card">
           <img src="../assets/portada.jpg" alt="Animales por Hábitat" />
         </div>
+        <div style="grid-column: 1 / -1; text-align: center; margin-top: 12px;">
+          <a href="#" class="cta-btn">👉 Quiero el libro para mi hijo</a>
+        </div>
       </div>
-      <br />
-      <a href="#" class="cta-btn">👉 Quiero el libro para mi hijo</a>
-      <br />
+
       <div class="card">
         <h2>2. ¿Qué hace este libro por ti y por tu hijo?</h2>
         <ul>
