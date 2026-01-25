@@ -1,0 +1,89 @@
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.directory
+
+# IDE & Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+.vs/
+.netbeans/
+
+# Environment & Config
+.env
+.env.local
+.env.*.local
+.env.example
+
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build & Dist
+dist/
+build/
+out/
+*.min.js
+*.min.css
+
+# Logs
+logs/
+*.log
+*.logs
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Backup files
+*.bak
+*.backup
+*~
+*.orig
+
+# OS Generated
+.AppleDouble
+.LSOverride
+ehthumbs.db
+Desktop.ini
+
+# Project specific
+index-viejo.html
+test/
+testing/
+
+# Local testing/development
+localhost/
+debug/
+
+# Credentials & Secrets
+*.key
+*.pem
+secrets.json
+credentials.json
+
+# Cache
+.cache/
+*.cache
+.eslintcache
+
+# System
+*.pid
+*.pid.lock
+
+# Bundle
+dist.js
+bundle.js
+bundle.css
