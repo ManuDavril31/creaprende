@@ -60,14 +60,49 @@
         margin: 6px auto;
       }
 
-      /* HERO CARD GLOBAL */
+      /* BANNER DE URGENCIA */
+      .urgency-banner {
+        background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+        color: #fff;
+        padding: 12px 16px;
+        text-align: center;
+        font-weight: 700;
+        animation: blink-urgency 1.5s infinite;
+      }
+
+      @keyframes blink-urgency {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.8; }
+      }
+
+      /* HERO MEJORADO */
       .hero-card {
         max-width: 420px;
         background: #fff;
         border-radius: 18px;
-        padding: 18px;
+        padding: 24px;
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
         text-align: center;
+        position: relative;
+      }
+
+      .hero-card::before {
+        content: "⭐⭐⭐⭐⭐";
+        display: block;
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        letter-spacing: 2px;
+      }
+
+      .hero-card .price-tag {
+        display: inline-block;
+        background: var(--orange);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin: 12px 0;
       }
 
       .hero-card img {
@@ -88,7 +123,7 @@
       .cta-btn {
         display: inline-block;
         max-width: 420px;
-        padding: 14px 32px;
+        padding: 16px 40px;
         background: linear-gradient(135deg, var(--orange), var(--orange-dark));
         color: #fff;
         border-radius: 12px;
@@ -98,6 +133,7 @@
         animation: pulse-infinite 2s infinite;
         box-shadow: 0 6px 16px rgba(247, 147, 30, 0.3);
         transition: all 0.3s ease;
+        font-size: clamp(0.9rem, 2vw, 1rem);
       }
 
       .cta-btn:hover {
@@ -285,24 +321,31 @@
       🔥 Más de <span id="counter"></span> familias usando libros educativos
     </div>
 
+    <div class="urgency-banner">
+      ⏰ Oferta especial: Descarga hoy y obtén acceso inmediato 🎁
+    </div>
+
     <header>
       <h1>🐾 Animales por Hábitat – Libro Educativo para Colorear</h1>
-      <p>
-        Aprendizaje divertido, consciente y sin pantallas para niños de 4 a 8
-        años
+      <p style="font-size: 1.1rem; font-weight: 600;">
+        🎨 <strong>Aprendizaje divertido, sin pantallas, desarrolla creatividad</strong>
       </p>
       <p>
-        Un libro pensado para que los niños aprendan jugando y desarrollen su
-        creatividad.
+        Un libro pensado para que los niños de 4 a 8 años aprendan jugando, 
+        descubran hábitats y coloren mientras aprenden.
       </p>
-      <p>Ideal para padres, madres y docentes.</p>
+      <p>✅ Ideal para padres, madres y docentes | 📥 Descarga instantánea</p>
     </header>
 
     <div class="hero-card">
       <img src="../assets/portada.jpg" alt="Animales por Hábitat" />
-      <div style="text-align: center;">
-        <a href="#" class="cta-btn">👉 Quiero el libro para mi hijo</a>
+      <div class="price-tag">📚 Acceso de por vida + Impresión Ilimitada</div>
+      <div style="text-align: center; margin-top: 16px;">
+        <a href="#" class="cta-btn">👉 Quiero el libro para mi hijo - ¡ACCESO AHORA!</a>
       </div>
+      <p style="margin-top: 12px; color: #27ae60; font-weight: 700; font-size: 0.9rem;">
+        ✓ Garantía 100% Satisfecho o Dinero de Vuelta
+      </p>
     </div>
 
     <section>
@@ -341,13 +384,15 @@
       <div class="card">
         <h2>2. ¿Qué hace este libro por ti y por tu hijo?</h2>
         <ul>
-          <li>Mantiene a tu hijo entretenido sin necesidad de pantallas.</li>
-          <li>Refuerza el aprendizaje de forma visual, natural y divertida.</li>
-          <li>Estimula la creatividad, la imaginación y la curiosidad.</li>
-          <li>Mejora la motricidad fina y la concentración.</li>
-          <li>Te da tranquilidad como padre o docente.</li>
+          <li>✓ Mantiene a tu hijo entretenido <strong>SIN PANTALLAS</strong></li>
+          <li>✓ Aprende mientras colorea - <strong>Diversión educativa garantizada</strong></li>
+          <li>✓ Estimula creatividad e imaginación desde día 1</li>
+          <li>✓ Desarrolla motricidad fina y concentración</li>
+          <li>✓ Tranquilidad: Material educativo seguro y de confianza</li>
         </ul>
-        <p>💛 Menos pantallas, más aprendizaje real.</p>
+        <p style="background: #f0f8ff; padding: 14px; border-radius: 10px; border-left: 4px solid var(--green);">
+          💛 <strong>Menos pantallas = Más aprendizaje real y creativo</strong>
+        </p>
       </div>
       <div class="card">
         <h2>3. ¿Por qué puedes confiar en este libro?</h2>
@@ -385,20 +430,25 @@
       <div class="card">
         <h2>5. ¿Qué incluye el libro?</h2>
         <ul>
-          <li>Ebook imprimible en formato PDF</li>
-          <li>Bosque • Océano • Desierto • Polo • Granja • Selva</li>
-          <li>Dibujos grandes y fáciles de colorear</li>
-          <li>Mini datos educativos</li>
-          <li>Actividades extras</li>
+          <li>📄 Ebook PDF imprimible <strong>Acceso ILIMITADO de por vida</strong></li>
+          <li>🌍 6 Hábitats: Bosque • Océano • Desierto • Polo • Granja • Selva</li>
+          <li>🎨 Dibujos grandes, amigables y fáciles de colorear para todas las edades</li>
+          <li>📚 Datos educativos curados para niños de 4-8 años</li>
+          <li>🎯 Actividades extras para reforzar el aprendizaje</li>
+          <li>🖨️ Impresión ilimitada para toda la familia</li>
         </ul>
       </div>
       <div class="card">
         <h2>6. ¿Cuánto cuesta?</h2>
-        <p>El valor educativo es alto, pero su precio es accesible.</p>
+        <p style="font-size: 1.05rem; color: #27ae60; font-weight: 700;">
+          💰 <strong>Inversión educativa desde $14.99 - Menos que un café al mes</strong>
+        </p>
+        <p>El valor es exponencial comparado con otros libros educativos.</p>
         <ul>
-          <li>Una sola compra</li>
-          <li>Uso ilimitado</li>
-          <li>Impresión ilimitada</li>
+          <li>💳 Una sola compra - ¡Descarga inmediata!</li>
+          <li>📚 Uso ilimitado para todos tus hijos</li>
+          <li>🖨️ Impresión ilimitada cuantas veces quieras</li>
+          <li>♻️ Acceso de por vida - sin suscripción</li>
         </ul>
       </div>
       <div class="card">
@@ -411,9 +461,12 @@
         <p>Garantía de satisfacción.</p>
         <p>💚 Aprender sin pantallas empieza hoy.</p>
       </div>
-      <div class="card">
+      <div class="card" style="background: linear-gradient(135deg, #fff5f0, #fffbf8); border-left: 6px solid var(--orange);">
         <h2>9. ¿Qué pasa si no lo compras ahora?</h2>
-        <p>Más pantallas, menos creatividad y menos aprendizaje activo.</p>
+        <p style="font-weight: 600; color: #d9534f;">
+          ⚠️ <strong>Seguirá: Más pantallas → Menos creatividad → Menos aprendizaje real</strong>
+        </p>
+        <p>No dejes pasar esta oportunidad educativa. Cada día cuenta en el desarrollo de tu hijo.</p>
       </div>
       <div class="card">
         <h2>10. ¿Cómo obtener resultados rápido?</h2>
@@ -423,12 +476,19 @@
         <h2>11. ¿Cómo puedes contactarnos?</h2>
         <p>📩 soporte@tulibroeducativo.com</p>
       </div>
-      <div class="card">
-        <h2>12. ¿Qué debes hacer ahora?</h2>
-        <p>Regálale a tu hijo aprendizaje real y creativo.</p>
-        <div style="text-align: center; margin-top: 20px;">
-          <a href="#" class="cta-btn">👉 Descargar ahora el libro educativo</a>
+      <div class="card" style="background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: #fff; text-align: center; padding: 32px;">
+        <h2 style="color: #fff;">⭐ 12. Tu Momento Es AHORA</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 24px;">
+          <strong>Dale a tu hijo el regalo del aprendizaje real, creativo y sin pantallas.</strong>
+        </p>
+        <div style="text-align: center; margin: 24px 0;">
+          <a href="#" class="cta-btn" style="background: #fff; color: var(--orange); animation: pulse-infinite 2s infinite;">
+            🎁 OBTENER ACCESO AHORA - ¡DESCARGA INMEDIATA!
+          </a>
         </div>
+        <p style="font-size: 0.95rem; margin-top: 16px;">
+          ✓ Garantía de 30 días: Satisfecho o dinero devuelto
+        </p>
       </div>
 
       <div class="faq">
