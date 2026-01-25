@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animales por Hábitat – Libro Educativo para Colorear</title>
+
+    <style>
+      :root {
+        --orange: #f7931e;
+        --orange-dark: #e87400;
+        --green: #27ae60;
+        --purple: #9b59b6;
+        --pink: #ff6b9d;
+        --bg: #f5f7fa;
+        --card: #ffffff;
+        --accent-yellow: #ffd700;
+      }
+
+      /* RESET */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding-top: 54px;
+        font-family: "Comic Sans MS", "Arial Rounded", "Century Gothic", sans-serif;
+        background: var(--bg);
+        color: #333;
+        line-height: 1.6;
+        font-size: clamp(16px, 2.5vw, 18px);
+      }
+
+      /* TIPOGRAFÍA INFANTIL PARA NIÑOS */
+      .kid-friendly {
+        font-family: "Comic Sans MS", cursive;
+        letter-spacing: 0.5px;
+      }
+
+      /* CONTADOR */
+      .counter-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(90deg, var(--green), #1abc9c);
+        color: #fff;
+        text-align: center;
+        padding: 12px 16px;
+        font-weight: 700;
+        z-index: 9999;
+        font-size: clamp(0.85rem, 2vw, 1rem);
+        animation: slideDown 0.5s ease;
+      }
+
+      @keyframes slideDown {
+        from { transform: translateY(-100%); }
+        to { transform: translateY(0); }
+      }
+
+      /* BANNER DE URGENCIA MEJORADO */
+      .urgency-banner {
+        background: linear-gradient(90deg, #ff6b6b, #ff8787);
+        color: #fff;
+        padding: 16px;
+        text-align: center;
+        font-weight: 800;
+        animation: pulse-banner 2s infinite;
+        font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      }
+
+      @keyframes pulse-banner {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+      }
+
+      /* HEADER OPTIMIZADO */
+      header {
+        background: linear-gradient(135deg, var(--green), #1abc9c);
+        color: #fff;
+        text-align: center;
+        padding: 40px 16px 60px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      header::after {
+        content: "🐶🐱🦁🐘🦒🦓🐢🦕";
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.2rem;
+        opacity: 0.6;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+
+      header h1 {
+        font-size: clamp(2rem, 6vw, 2.8rem);
+        margin-bottom: 10px;
+        font-weight: 900;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 span {
+        display: block;
+        font-size: 0.8em;
+        color: var(--accent-yellow);
+        font-weight: 700;
+        margin-top: 8px;
+      }
+
+      header p {
+        max-width: 760px;
+        margin: 12px auto;
+        font-size: clamp(0.95rem, 2vw, 1.05rem);
+        font-weight: 500;
+      }
+
+      /* HERO CARD OPTIMIZADA */
+      .hero-card {
+        max-width: 480px;
+        background: linear-gradient(135deg, #fff, #fff9f5);
+        border-radius: 24px;
+        padding: 32px 24px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        text-align: center;
+        position: relative;
+        margin: auto;
+        border: 3px solid var(--accent-yellow);
+      }
+
+      .hero-card::before {
+        content: "⭐⭐⭐⭐⭐";
+        display: block;
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+        letter-spacing: 4px;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+
+      .rating-text {
+        font-size: 0.9rem;
+        color: #f39c12;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      .hero-card .price-tag {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-size: 0.95rem;
+        font-weight: 800;
+        margin: 16px 0;
+        box-shadow: 0 6px 16px rgba(247, 147, 30, 0.3);
+      }
+
+      .hero-card img {
+        width: 100%;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        object-fit: cover;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 4px solid var(--accent-yellow);
+      }
+
+      .hero-card img:hover {
+        transform: scale(1.08);
+        box-shadow: 0 16px 40px rgba(247, 147, 30, 0.3);
+      }
+
+      /* BOTÓN PRINCIPAL MEJORADO */
+      .cta-btn {
+        display: inline-block;
+        max-width: 100%;
+        padding: 18px 44px;
+        background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+        color: #fff;
+        border-radius: 16px;
+        text-decoration: none;
+        font-weight: 900;
+        text-align: center;
+        animation: pulse-infinite 2s infinite;
+        box-shadow: 0 8px 20px rgba(247, 147, 30, 0.4);
+        transition: all 0.3s ease;
+        font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+        cursor: pointer;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .cta-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 32px rgba(247, 147, 30, 0.6);
+        animation-play-state: paused;
+      }
+
+      .cta-btn:active {
+        transform: translateY(-1px);
+      }
+
+      @keyframes pulse-infinite {
+        0% { box-shadow: 0 0 0 0 rgba(247, 147, 30, 0.7); }
+        50% { box-shadow: 0 0 0 12px rgba(247, 147, 30, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(247, 147, 30, 0); }
+      }
+
+      /* GARANTÍA BADGE */
+      .guarantee-badge {
+        background: linear-gradient(135deg, #27ae60, #16a085);
+        color: #fff;
+        padding: 14px 16px;
+        border-radius: 12px;
+        margin-top: 16px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        animation: slideInLeft 0.6s ease;
+      }
+
+      @keyframes slideInLeft {
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+
+      /* SECCIÓN */
+      section {
+        max-width: 920px;
+        margin: auto;
+        padding: 24px 16px;
+      }
+
+      /* CARD GENERAL MEJORADA */
+      .card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 32px;
+        margin-bottom: 28px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border-left: 6px solid var(--orange);
+        position: relative;
+      }
+
+      .card:hover {
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        transform: translateY(-4px);
+      }
+
+      /* TÍTULOS MEJORADOS */
+      h2 {
+        text-align: left;
+        color: var(--orange-dark);
+        font-size: clamp(1.4rem, 4.5vw, 2rem);
+        position: relative;
+        padding-bottom: 16px;
+        margin-top: 0;
+        font-weight: 900;
+      }
+
+      h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 70px;
+        height: 5px;
+        background: linear-gradient(90deg, var(--orange), var(--accent-yellow));
+        border-radius: 3px;
+      }
+
+      /* LISTAS MEJORADAS */
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+
+      li {
+        padding: 16px 20px;
+        padding-left: 48px;
+        position: relative;
+        margin-bottom: 14px;
+        background: linear-gradient(135deg, #f8f9ff, #f0f8ff);
+        border-radius: 14px;
+        border-left: 5px solid var(--orange);
+        transition: all 0.3s ease;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+
+      li:hover {
+        background: linear-gradient(135deg, #fffbf0, #fff5e6);
+        transform: translateX(6px);
+        box-shadow: 0 6px 16px rgba(247, 147, 30, 0.18);
+      }
+
+      li::before {
+        content: "✨";
+        position: absolute;
+        left: 14px;
+        font-size: 1.3rem;
+        animation: twinkle 2s infinite;
+      }
+
+      @keyframes twinkle {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.6; }
+      }
+
+      /* SECCIÓN HÁBITATS VISUAL */
+      .habitats-showcase {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 16px;
+        margin: 24px 0;
+      }
+
+      .habitat-box {
+        background: linear-gradient(135deg, #fff, #f8f9fa);
+        border: 3px solid var(--accent-yellow);
+        border-radius: 16px;
+        padding: 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .habitat-box:hover {
+        transform: scale(1.08) rotateZ(2deg);
+        box-shadow: 0 10px 24px rgba(247, 147, 30, 0.25);
+      }
+
+      .habitat-box .emoji {
+        font-size: 2.5rem;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .habitat-box .label {
+        font-weight: 800;
+        color: var(--orange-dark);
+        font-size: 0.9rem;
+      }
+
+      /* TESTIMONIOS MEJORADOS */
+      .testimonials {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 20px;
+      }
+
+      @media (min-width: 700px) {
+        .testimonials {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .testimonial {
+        background: linear-gradient(135deg, #fff9f0, #fffbf8);
+        border: 2px solid var(--accent-yellow);
+        border-left: 6px solid var(--orange);
+        padding: 20px;
+        border-radius: 14px;
+        font-style: italic;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        transition: all 0.3s ease;
+      }
+
+      .testimonial:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 24px rgba(247, 147, 30, 0.15);
+      }
+
+      .testimonial strong {
+        display: block;
+        margin-top: 12px;
+        color: var(--orange-dark);
+        font-style: normal;
+      }
+
+      /* HERO MULTIPLE MEJORADO */
+      .card:has(.hero-card) {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        justify-items: center;
+      }
+
+      @media (min-width: 700px) {
+        .card:has(.hero-card) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1000px) {
+        .card:has(.hero-card) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .card .hero-card {
+        max-width: 100%;
+        margin: 0;
+        padding: 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card .hero-card img {
+        flex-grow: 1;
+      }
+
+      /* FAQ MEJORADO */
+      .faq {
+        background: linear-gradient(135deg, #fff, #f9f9f9);
+        border-radius: 20px;
+        padding: 32px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        margin-top: 32px;
+      }
+
+      .faq h2 {
+        text-align: center;
+      }
+
+      .faq-item {
+        border-radius: 14px;
+        margin-bottom: 12px;
+        border: 2px solid #eee;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .faq-item:hover {
+        border-color: var(--orange);
+        box-shadow: 0 4px 12px rgba(247, 147, 30, 0.1);
+      }
+
+      .faq-question {
+        padding: 18px 20px;
+        background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.95rem;
+        user-select: none;
+      }
+
+      .faq-question:hover {
+        background: linear-gradient(135deg, #fffbf0, #fff5e6);
+      }
+
+      .faq-answer {
+        display: none;
+        padding: 20px;
+        background: #fff;
+        line-height: 1.7;
+      }
+
+      /* FOOTER MEJORADO */
+      footer {
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        color: #ecf0f1;
+        text-align: center;
+        padding: 32px 16px;
+        font-size: 0.9rem;
+        margin-top: 48px;
+        border-top: 4px solid var(--orange);
+      }
+
+      footer a {
+        color: var(--orange);
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* CTA FINAL ESPECIAL */
+      .final-cta-section {
+        background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+        color: #fff;
+        text-align: center;
+        padding: 48px 24px;
+        border-radius: 24px;
+        margin: 40px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .final-cta-section::before {
+        content: "✨🎨📚🎓🌟";
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 1.4rem;
+        opacity: 0.3;
+      }
+
+      .final-cta-section h2 {
+        color: #fff;
+        margin-bottom: 16px;
+        font-size: 2rem;
+      }
+
+      .final-cta-section p {
+        font-size: 1.1rem;
+        margin-bottom: 24px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="counter-fixed">
+      🔥 Más de <span id="counter"></span> familias usando libros educativos
+    </div>
+
+    <div class="urgency-banner">
+      ⏰ Oferta especial: Descarga hoy y obtén acceso inmediato 🎁
+    </div>
+
+    <header>
+      <h1>🐾 Animales por Hábitat – Libro Educativo para Colorear</h1>
+      <p style="font-size: 1.1rem; font-weight: 600;">
+        🎨 <strong>Aprendizaje divertido, sin pantallas, desarrolla creatividad</strong>
+      </p>
+      <p>
+        Un libro pensado para que los niños de 4 a 8 años aprendan jugando, 
+        descubran hábitats y coloren mientras aprenden.
+      </p>
+      <p>✅ Ideal para padres, madres y docentes | 📥 Descarga instantánea</p>
+    </header>
+
+    <div class="hero-card">
+      <img src="../assets/portada.jpg" alt="Animales por Hábitat" />
+      <div class="price-tag">📚 Acceso de por vida + Impresión Ilimitada</div>
+      <div style="text-align: center; margin-top: 16px;">
+        <a href="#" class="cta-btn">👉 Quiero el libro para mi hijo - ¡ACCESO AHORA!</a>
+      </div>
+      <p style="margin-top: 12px; color: #27ae60; font-weight: 700; font-size: 0.9rem;">
+        ✓ Garantía 100% Satisfecho o Dinero de Vuelta
+      </p>
+    </div>
+
+    <section>
+      <div class="card">
+        <h2>1. ¿Qué estás comprando exactamente?</h2>
+        <ul>
+          <li>
+            Estás adquiriendo un ebook educativo imprimible diseñado
+            especialmente para niños de 4 a 8 años, donde aprenderán qué
+            animales existen y en qué hábitats viven, a través del juego, el
+            color y la exploración.
+          </li>
+          <li>No es solo un libro para colorear:</li>
+          <li>
+            Es una experiencia de aprendizaje activo, sencilla y efectiva, que
+            puedes usar tanto en casa como en el aula.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card" style="text-align: center;">
+        <div class="hero-card">
+          <img src="../assets/portada2.jpg" alt="Animales por Hábitat" />
+        </div>
+        <div class="hero-card">
+          <img src="../assets/portada.jpg" alt="Animales por Hábitat" />
+        </div>
+        <div class="hero-card">
+          <img src="../assets/portada.jpg" alt="Animales por Hábitat" />
+        </div>
+        <div style="grid-column: 1 / -1; text-align: center; margin-top: 12px;">
+          <a href="#" class="cta-btn">👉 Quiero el libro para mi hijo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>2. ¿Qué hace este libro por ti y por tu hijo?</h2>
+        <ul>
+          <li>✓ Mantiene a tu hijo entretenido <strong>SIN PANTALLAS</strong></li>
+          <li>✓ Aprende mientras colorea - <strong>Diversión educativa garantizada</strong></li>
+          <li>✓ Estimula creatividad e imaginación desde día 1</li>
+          <li>✓ Desarrolla motricidad fina y concentración</li>
+          <li>✓ Tranquilidad: Material educativo seguro y de confianza</li>
+        </ul>
+        <p style="background: #f0f8ff; padding: 14px; border-radius: 10px; border-left: 4px solid var(--green);">
+          💛 <strong>Menos pantallas = Más aprendizaje real y creativo</strong>
+        </p>
+      </div>
+      <div class="card">
+        <h2>3. ¿Por qué puedes confiar en este libro?</h2>
+        <p>
+          Este material fue creado pensando en las etapas reales de desarrollo
+          infantil entre los 4 y 8 años.
+        </p>
+        <ul>
+          <li>Aprendizaje visual</li>
+          <li>Repetición positiva</li>
+          <li>Actividades lúdicas</li>
+          <li>Información simple y comprensible</li>
+        </ul>
+        <p>
+          Todo presentado de forma clara, amable y atractiva para los niños.
+        </p>
+      </div>
+      <div class="card">
+        <h2>4. ¿Quién más ya lo está usando?</h2>
+        <div class="testimonials">
+          <div class="testimonial">
+            🗣️ “A mi hijo le encanta. Aprende mientras colorea.”<br />
+            <strong>— Laura, mamá</strong>
+          </div>
+          <div class="testimonial">
+            🗣️ “Lo uso en clase y los niños participan felices.”<br />
+            <strong>— Ana, maestra</strong>
+          </div>
+          <div class="testimonial">
+            🗣️ “Excelente inversión para la casa.”<br />
+            <strong>— Carlos, papá</strong>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>5. ¿Qué incluye el libro?</h2>
+        <ul>
+          <li>📄 Ebook PDF imprimible <strong>Acceso ILIMITADO de por vida</strong></li>
+          <li>🌍 6 Hábitats: Bosque • Océano • Desierto • Polo • Granja • Selva</li>
+          <li>🎨 Dibujos grandes, amigables y fáciles de colorear para todas las edades</li>
+          <li>📚 Datos educativos curados para niños de 4-8 años</li>
+          <li>🎯 Actividades extras para reforzar el aprendizaje</li>
+          <li>🖨️ Impresión ilimitada para toda la familia</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>6. ¿Cuánto cuesta?</h2>
+        <p style="font-size: 1.05rem; color: #27ae60; font-weight: 700;">
+          💰 <strong>Inversión educativa desde $14.99 - Menos que un café al mes</strong>
+        </p>
+        <p>El valor es exponencial comparado con otros libros educativos.</p>
+        <ul>
+          <li>💳 Una sola compra - ¡Descarga inmediata!</li>
+          <li>📚 Uso ilimitado para todos tus hijos</li>
+          <li>🖨️ Impresión ilimitada cuantas veces quieras</li>
+          <li>♻️ Acceso de por vida - sin suscripción</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>7. ¿Cómo es el pago?</h2>
+        <p>💳 Pago único y seguro.</p>
+        <p>📥 Descarga inmediata.</p>
+      </div>
+      <div class="card">
+        <h2>8. ¿Qué garantía tienes?</h2>
+        <p>Garantía de satisfacción.</p>
+        <p>💚 Aprender sin pantallas empieza hoy.</p>
+      </div>
+      <div class="card" style="background: linear-gradient(135deg, #fff5f0, #fffbf8); border-left: 6px solid var(--orange);">
+        <h2>9. ¿Qué pasa si no lo compras ahora?</h2>
+        <p style="font-weight: 600; color: #d9534f;">
+          ⚠️ <strong>Seguirá: Más pantallas → Menos creatividad → Menos aprendizaje real</strong>
+        </p>
+        <p>No dejes pasar esta oportunidad educativa. Cada día cuenta en el desarrollo de tu hijo.</p>
+      </div>
+      <div class="card">
+        <h2>10. ¿Cómo obtener resultados rápido?</h2>
+        <p>📥 Descárgalo • 🖨️ Imprímelo • 🖍️ Entrégaselo a tu hijo</p>
+      </div>
+      <div class="card">
+        <h2>11. ¿Cómo puedes contactarnos?</h2>
+        <p>📩 soporte@tulibroeducativo.com</p>
+      </div>
+      <div class="card" style="background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: #fff; text-align: center; padding: 32px;">
+        <h2 style="color: #fff;">⭐ 12. Tu Momento Es AHORA</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 24px;">
+          <strong>Dale a tu hijo el regalo del aprendizaje real, creativo y sin pantallas.</strong>
+        </p>
+        <div style="text-align: center; margin: 24px 0;">
+          <a href="#" class="cta-btn" style="background: #fff; color: var(--orange); animation: pulse-infinite 2s infinite;">
+            🎁 OBTENER ACCESO AHORA - ¡DESCARGA INMEDIATA!
+          </a>
+        </div>
+        <p style="font-size: 0.95rem; margin-top: 16px;">
+          ✓ Garantía de 30 días: Satisfecho o dinero devuelto
+        </p>
+      </div>
+
+      <div class="faq">
+        <h2>❓ Preguntas Frecuentes</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">¿Edad recomendada? <span>+</span></div>
+          <div class="faq-answer">De 4 a 8 años.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">¿Es imprimible? <span>+</span></div>
+          <div class="faq-answer">
+            Sí, puedes imprimirlo todas las veces que quieras.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">¿Sirve para colegios? <span>+</span></div>
+          <div class="faq-answer">Sí, es perfecto para uso educativo.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">¿Necesita internet? <span>+</span></div>
+          <div class="faq-answer">No, se usa sin conexión.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            ¿Puedo usarlo con varios niños? <span>+</span>
+          </div>
+          <div class="faq-answer">Sí, uso ilimitado.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 – Animales por Hábitat<br />
+      Educación con amor, creatividad y conciencia 💚
+    </footer>
+
+    <script>
+      document.querySelectorAll(".faq-question").forEach((q) => {
+        q.addEventListener("click", () => {
+          const answer = q.nextElementSibling;
+          answer.style.display =
+            answer.style.display === "block" ? "none" : "block";
+        });
+      });
+
+      const counterNumber = Math.floor(Math.random() * 1000);
+      document.querySelector("#counter").textContent = counterNumber;
+
+      setInterval(() => {
+        const current = parseInt(
+          document.querySelector("#counter").textContent,
+          10,
+        );
+        document.querySelector("#counter").textContent = current + 1;
+      }, 10000);
+    </script>
+  </body>
+</html>
