@@ -1,1273 +1,652 @@
-<style>
-  .fixed-bottom-btn {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 99999;
-    background: linear-gradient(90deg, #ffb347 0%, #ff8300 100%);
-    color: #fff;
-    font-weight: 900;
-    font-size: 1.15rem;
-    text-align: center;
-    padding: 22px 0 18px 0;
-    border-top: 4px solid #ffd700;
-    box-shadow: 0 -4px 24px 0 #ffd70055;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    cursor: pointer;
-    transition:
-      background 0.2s,
-      box-shadow 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .fixed-bottom-btn:hover {
-    background: linear-gradient(90deg, #ff8300 0%, #ffb347 100%);
-    box-shadow: 0 -8px 32px 0 #ffd70099;
-  }
-  .fixed-bottom-btn a {
-    color: #fff;
-    text-decoration: none;
-    width: 100%;
-    display: block;
-  }
-  @media (max-width: 600px) {
-    .fixed-bottom-btn {
-      font-size: 1rem;
-      padding: 16px 0 14px 0;
-    }
-  }
-</style>
-<div class="fixed-bottom-btn">
-  <a href="https://pay.hotmart.com/O103935436Y" target="_blank" rel="noopener">
-    🎁 OBTENER ACCESO AHORA - ¡DESCARGA EN 2 MIN!
-  </a>
-</div>
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>★Animales por Hábitat – Libro Educativo para Colorear | +4.9★</title>
-    <meta
-      name="description"
-      content="Libro educativo para colorear con 30+ animales y 6 hábitats. Aprenden mientras juegan, sin pantallas. Para niños 3-9 años. Acceso ilimitado $6.99"
-    />
 
-    <!-- Meta Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js",
-      );
-      fbq("init", "1399631527763009");
-      fbq("track", "PageView");
-    </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=1399631527763009&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
-    <style>
-      :root {
-        --orange: #f7931e;
-        --orange-dark: #e87400;
-        --green: #27ae60;
-        --bg: #f5f7fa;
-        --card: #ffffff;
-        --accent-yellow: #ffd700;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        width: 100%;
-      }
-
-      body {
-        padding-top: 54px;
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, sans-serif;
-        background: var(--bg);
-        color: #333;
-        line-height: 1.6;
-        font-size: clamp(16px, 2.5vw, 18px);
-      }
-
-      /* CONTADOR SUPERIOR */
-      .counter-fixed {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: linear-gradient(90deg, var(--green), #1abc9c);
-        color: #fff;
-        text-align: center;
-        padding: 12px 16px;
-        font-weight: 700;
-        z-index: 9999;
-        font-size: clamp(0.85rem, 2vw, 1rem);
-      }
-
-      .counter-fixed strong {
-        color: var(--accent-yellow);
-      }
-
-      /* BANNER URGENCIA */
-      .urgency-banner {
-        background: linear-gradient(90deg, #ff6b6b, #ff8787);
-        color: #fff;
-        padding: 16px;
-        text-align: center;
-        font-weight: 800;
-        font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-        animation: pulse-banner 2s infinite;
-      }
-
-      @keyframes pulse-banner {
-        0%,
-        100% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.02);
-        }
-      }
-
-      /* HEADER */
-      header {
-        background: linear-gradient(135deg, var(--green), #1abc9c);
-        color: #fff;
-        text-align: center;
-        padding: 48px 24px 48px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      header::before {
-        content: "🐶 🐱 🦁 🐘 🦒 🦓 🐢 🦕 🦘 🦏 🐘 🦛";
-        position: absolute;
-        top: 8px;
-        right: 16px;
-        font-size: 1rem;
-        opacity: 0.5;
-      }
-
-      header h1 {
-        font-size: clamp(1.8rem, 6vw, 2.6rem);
-        margin: 0 0 12px 0;
-        font-weight: 900;
-        line-height: 1.2;
-      }
-
-      header h1 span {
-        display: block;
-        font-size: 0.7em;
-        color: var(--accent-yellow);
-        margin-top: 8px;
-      }
-
-      header p {
-        max-width: 800px;
-        margin: 14px auto;
-        font-size: 1rem;
-      }
-
-      /* HERO CARD PRINCIPAL */
-      .hero-card {
-        max-width: 500px;
-        background: linear-gradient(135deg, #fff, #fff9f5);
-        border-radius: 28px;
-        padding: 36px 28px;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-        text-align: center;
-        position: relative;
-        margin: -40px auto 40px;
-        border: 4px solid var(--accent-yellow);
-      }
-
-      .hero-card::before {
-        content: "⭐⭐⭐⭐⭐";
-        display: block;
-        font-size: 1.6rem;
-        margin-bottom: 12px;
-        letter-spacing: 6px;
-      }
-
-      .rating-text {
-        font-size: 0.95rem;
-        color: #f39c12;
-        font-weight: 800;
-        margin-bottom: 20px;
-      }
-
-      .hero-card img {
-        width: 100%;
-        border-radius: 24px;
-        margin-bottom: 24px;
-        object-fit: cover;
-        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
-        transition:
-          transform 0.4s ease,
-          box-shadow 0.4s ease;
-        border: 5px solid var(--accent-yellow);
-      }
-
-      .hero-card img:hover {
-        transform: scale(1.08);
-        box-shadow: 0 20px 50px rgba(247, 147, 30, 0.35);
-      }
-
-      /* HERO CAROUSEL */
-      .hero-carousel-container {
-        position: relative;
-        width: 100%;
-        margin-bottom: 24px;
-        border-radius: 24px;
-        overflow: hidden;
-        background: linear-gradient(135deg, #fff, #f8f9fa);
-      }
-
-      .hero-carousel-track {
-        display: flex;
-        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        width: 100%;
-      }
-
-      .hero-carousel-slide {
-        min-width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 16px;
-      }
-
-      .hero-carousel-slide img {
-        max-width: 100%;
-        max-height: 450px;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-        border-radius: 18px;
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-        border: 4px solid var(--accent-yellow);
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
-      }
-
-      .hero-carousel-slide img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 16px 40px rgba(247, 147, 30, 0.3);
-      }
-
-      .hero-carousel-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(247, 147, 30, 0.85);
-        color: white;
-        border: none;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        font-size: 24px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-        z-index: 10;
-      }
-
-      .hero-carousel-btn:hover {
-        background: var(--orange);
-        transform: translateY(-50%) scale(1.12);
-      }
-
-      .hero-carousel-btn.prev {
-        left: 10px;
-      }
-
-      .hero-carousel-btn.next {
-        right: 10px;
-      }
-
-      .hero-carousel-indicators {
-        display: flex;
-        justify-content: center;
-        gap: 8px;
-        padding: 16px 0 0;
-      }
-
-      .hero-carousel-indicator {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #ddd;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      .hero-carousel-indicator.active {
-        background: var(--orange);
-        width: 28px;
-        border-radius: 5px;
-      }
-
-      .price-tag {
-        display: inline-block;
-        background: linear-gradient(135deg, var(--orange), var(--orange-dark));
-        color: #fff;
-        padding: 14px 24px;
-        border-radius: 28px;
-        font-size: 1rem;
-        font-weight: 900;
-        margin: 20px 0;
-        box-shadow: 0 8px 20px rgba(247, 147, 30, 0.4);
-      }
-
-      .cta-btn {
-        display: inline-block;
-        max-width: 100%;
-        padding: 20px 48px;
-        background: linear-gradient(135deg, var(--orange), var(--orange-dark));
-        color: #fff;
-        border-radius: 18px;
-        text-decoration: none;
-        font-weight: 900;
-        text-align: center;
-        animation: pulse-infinite 2.5s infinite;
-        box-shadow: 0 10px 25px rgba(247, 147, 30, 0.4);
-        transition: all 0.3s ease;
-        font-size: clamp(0.95rem, 2.2vw, 1.1rem);
-        cursor: pointer;
-        border: none;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      .cta-btn:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 16px 40px rgba(247, 147, 30, 0.6);
-        animation-play-state: paused;
-      }
-
-      @keyframes pulse-infinite {
-        0% {
-          box-shadow: 0 0 0 0 rgba(247, 147, 30, 0.7);
-        }
-        50% {
-          box-shadow: 0 0 0 14px rgba(247, 147, 30, 0);
-        }
-        100% {
-          box-shadow: 0 0 0 0 rgba(247, 147, 30, 0);
-        }
-      }
-
-      .guarantee-badge {
-        background: linear-gradient(135deg, #27ae60, #16a085);
-        color: #fff;
-        padding: 16px 20px;
-        border-radius: 14px;
-        margin-top: 20px;
-        font-weight: 800;
-        font-size: 0.95rem;
-        display: inline-block;
-      }
-
-      /* SECCIÓN */
-      section {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 32px 20px;
-      }
-
-      /* CARD GENERAL */
-      .card {
-        background: #fff;
-        border-radius: 24px;
-        padding: 40px;
-        margin-bottom: 32px;
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-        transition: all 0.3s ease;
-        border-left: 8px solid var(--orange);
-      }
-
-      .card:hover {
-        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-        transform: translateY(-6px);
-      }
-
-      h2 {
-        color: var(--orange-dark);
-        font-size: clamp(1.4rem, 5vw, 2.2rem);
-        margin: 0 0 24px 0;
-        font-weight: 900;
-        position: relative;
-        padding-bottom: 16px;
-      }
-
-      h2::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 80px;
-        height: 6px;
-        background: linear-gradient(90deg, var(--orange), var(--accent-yellow));
-        border-radius: 3px;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 24px 0;
-      }
-
-      li {
-        padding: 18px 24px;
-        padding-left: 56px;
-        position: relative;
-        margin-bottom: 16px;
-        background: linear-gradient(135deg, #f8f9ff, #f0f8ff);
-        border-radius: 16px;
-        border-left: 6px solid var(--orange);
-        transition: all 0.3s ease;
-        font-weight: 500;
-        line-height: 1.6;
-      }
-
-      li:hover {
-        background: linear-gradient(135deg, #fffbf0, #fff5e6);
-        transform: translateX(8px);
-        box-shadow: 0 8px 18px rgba(247, 147, 30, 0.2);
-      }
-
-      li::before {
-        content: "✨";
-        position: absolute;
-        left: 18px;
-        font-size: 1.4rem;
-        animation: twinkle 2s infinite;
-      }
-
-      @keyframes twinkle {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.5;
-        }
-      }
-
-      /* HÁBITATS SHOWCASE - Para hábitats pequeños */
-      .habitats-showcase {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 18px;
-        margin: 32px 0;
-      }
-
-      /* GALLERY PREVIEW - Para vista interior (2 columnas desktop, 1 mobile) */
-      .gallery-preview {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 18px;
-        margin: 32px 0;
-      }
-
-      @media (min-width: 768px) {
-        .gallery-preview {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      .habitat-box {
-        background: linear-gradient(135deg, #fff, #f8f9fa);
-        border: 4px solid var(--accent-yellow);
-        border-radius: 18px;
-        padding: 24px;
-        text-align: center;
-        transition: all 0.3s ease;
-        cursor: pointer;
-      }
-
-      .habitat-box:hover {
-        transform: scale(1.1) rotateZ(2deg);
-        box-shadow: 0 14px 32px rgba(247, 147, 30, 0.3);
-      }
-
-      .habitat-box .emoji {
-        font-size: 2.8rem;
-        display: block;
-        margin-bottom: 12px;
-      }
-
-      .habitat-box .label {
-        font-weight: 900;
-        color: var(--orange-dark);
-        font-size: 0.95rem;
-        letter-spacing: 0.5px;
-      }
-
-      /* TESTIMONIOS */
-      .testimonials {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        margin-top: 24px;
-      }
-
-      @media (min-width: 750px) {
-        .testimonials {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-
-      .testimonial {
-        background: linear-gradient(135deg, #fff9f0, #fffbf8);
-        border: 3px solid var(--accent-yellow);
-        border-left: 8px solid var(--orange);
-        padding: 24px;
-        border-radius: 16px;
-        font-style: italic;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-        transition: all 0.3s ease;
-        line-height: 1.7;
-      }
-
-      .testimonial:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 14px 32px rgba(247, 147, 30, 0.2);
-      }
-
-      .testimonial strong {
-        display: block;
-        margin-top: 16px;
-        color: var(--orange-dark);
-        font-style: normal;
-        font-weight: 800;
-      }
-
-      /* GRID IMÁGENES */
-      .card:has(.hero-card) {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-
-      @media (min-width: 750px) {
-        .card:has(.hero-card) {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      @media (min-width: 1050px) {
-        .card:has(.hero-card) {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-
-      .card .hero-card {
-        max-width: 100%;
-        margin: 0;
-        padding: 24px;
-        background: linear-gradient(135deg, #fff, #f9f9f9);
-      }
-
-      /* CTA FINAL */
-      .final-cta-section {
-        background: linear-gradient(135deg, var(--orange), var(--orange-dark));
-        color: #fff;
-        text-align: center;
-        padding: 56px 32px;
-        border-radius: 28px;
-        margin: 48px 0;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .final-cta-section h2 {
-        color: #fff;
-        margin-bottom: 20px;
-        font-size: 2.4rem;
-      }
-
-      .final-cta-section p {
-        font-size: 1.15rem;
-        margin-bottom: 28px;
-        font-weight: 600;
-        line-height: 1.6;
-      }
-
-      /* FAQ */
-      .faq {
-        background: linear-gradient(135deg, #fff, #f9f9f9);
-        border-radius: 24px;
-        padding: 40px;
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-        margin-top: 40px;
-      }
-
-      .faq-item {
-        border-radius: 16px;
-        margin-bottom: 14px;
-        border: 2px solid #eee;
-        overflow: hidden;
-        transition: all 0.3s ease;
-      }
-
-      .faq-item:hover {
-        border-color: var(--orange);
-        box-shadow: 0 6px 16px rgba(247, 147, 30, 0.12);
-      }
-
-      .faq-question {
-        padding: 20px 24px;
-        background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
-        font-weight: 800;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 0.98rem;
-        user-select: none;
-        transition: background 0.3s ease;
-      }
-
-      .faq-question:hover {
-        background: linear-gradient(135deg, #fffbf0, #fff5e6);
-      }
-
-      .faq-answer {
-        display: none;
-        padding: 24px;
-        background: #fff;
-        line-height: 1.8;
-      }
-
-      /* FOOTER */
-      footer {
-        background: linear-gradient(135deg, #2c3e50, #34495e);
-        color: #ecf0f1;
-        text-align: center;
-        padding: 40px 24px;
-        font-size: 0.9rem;
-        margin-top: 56px;
-        border-top: 5px solid var(--orange);
-      }
-
-      footer a {
-        color: var(--orange);
-        text-decoration: none;
-        font-weight: 800;
-        transition: opacity 0.3s ease;
-      }
-
-      footer a:hover {
-        opacity: 0.8;
-      }
-
-      @media (max-width: 768px) {
-        .hero-card {
-          margin: -30px auto 32px;
-        }
-
-        .card {
-          padding: 28px;
-        }
-
-        section {
-          padding: 20px 12px;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="counter-fixed">
-      🔥 <strong id="counter">156</strong> familias descargaron hoy | ⭐ 4.9/5
-      valoración
-    </div>
-
-    <div class="urgency-banner">
-      ⏰ OFERTA LIMITADA: Acceso de por vida a $6.99 (Termina en 48 horas) 🎁
-    </div>
-
-    <header>
-      <h1>
-        🐾 Animales por Hábitat<span>El Libro que los Niños AMAN Colorear</span>
-      </h1>
-      <p
-        style="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>★Animales por Hábitat – Libro Educativo para Colorear | +4.9★</title>
+  <meta name="description"
+    content="Libro educativo para colorear con 30+ animales y 6 hábitats. Aprenden mientras juegan, sin pantallas. Para niños 3-9 años. Acceso ilimitado $6.99" />
+
+  <!-- Preload Critical LCP Image -->
+  <link rel="preload" as="image" href="../assets/portada.jpg" />
+
+  <!-- Meta Pixel Code (Optimized) -->
+  <script>
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+    fbq("init", "1399631527763009");
+    fbq("track", "PageView");
+  </script>
+
+  <!-- Critical CSS (Above the Fold) -->
+  <style>
+    :root {
+      --orange: #f7931e;
+      --orange-dark: #e87400;
+      --green: #27ae60;
+      --bg: #f5f7fa;
+      --card: #fff;
+      --accent-yellow: #ffd700;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    body {
+      padding-top: 54px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: #333;
+      line-height: 1.6;
+      font-size: 18px;
+    }
+
+    .counter-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(90deg, var(--green), #1abc9c);
+      color: #fff;
+      text-align: center;
+      padding: 12px 16px;
+      font-weight: 700;
+      z-index: 9999;
+      font-size: 0.9rem;
+    }
+
+    .urgency-banner {
+      background: linear-gradient(90deg, #ff6b6b, #ff8787);
+      color: #fff;
+      padding: 16px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 1rem;
+      animation: pulse-banner 2s infinite;
+    }
+
+    @keyframes pulse-banner {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.02);
+      }
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--green), #1abc9c);
+      color: #fff;
+      text-align: center;
+      padding: 48px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 6vw, 2.6rem);
+      margin: 0;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    header h1 span {
+      display: block;
+      font-size: 0.7em;
+      color: var(--accent-yellow);
+      margin-top: 8px;
+    }
+
+    .hero-card {
+      max-width: 500px;
+      background: #fff;
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+      text-align: center;
+      position: relative;
+      margin: -40px auto 40px;
+      border: 4px solid var(--accent-yellow);
+    }
+
+    .hero-carousel-container {
+      position: relative;
+      width: 100%;
+      margin-bottom: 16px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #fff;
+      aspect-ratio: 4/5;
+    }
+
+    .hero-carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      width: 100%;
+    }
+
+    .hero-carousel-slide {
+      min-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-carousel-slide img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 18px;
+      border: 4px solid var(--accent-yellow);
+    }
+
+    .price-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 28px;
+      font-weight: 900;
+      margin: 15px 0;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 18px 32px;
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      color: #fff;
+      border-radius: 18px;
+      text-decoration: none;
+      font-weight: 900;
+      animation: pulse-infinite 2.5s infinite;
+      box-shadow: 0 10px 25px rgba(247, 147, 30, 0.4);
+      text-transform: uppercase;
+      font-size: 1rem;
+    }
+
+    @keyframes pulse-infinite {
+      0% {
+        box-shadow: 0 0 0 0 rgba(247, 147, 30, 0.7);
+      }
+
+      100% {
+        box-shadow: 0 0 0 15px rgba(247, 147, 30, 0);
+      }
+    }
+
+    .guarantee-badge {
+      background: linear-gradient(135deg, #27ae60, #16a085);
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 14px;
+      margin-top: 15px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      display: inline-block;
+    }
+  </style>
+
+  <!-- Deferred Styles -->
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="styles.css">
+  </noscript>
+
+</head>
+
+<body>
+  <div class="counter-fixed">
+    🔥 <strong id="counter">156</strong> familias descargaron hoy | ⭐ 4.9/5
+    valoración
+  </div>
+
+  <div class="urgency-banner">
+    ⏰ OFERTA LIMITADA: Acceso de por vida a $6.99 (Termina en 48 horas) 🎁
+  </div>
+
+  <header>
+    <h1>
+      🐾 Animales por Hábitat<span>El Libro que los Niños AMAN Colorear</span>
+    </h1>
+    <p style="
           font-size: 1.1rem;
           font-weight: 700;
           color: var(--accent-yellow);
           margin: 16px 0;
-        "
-      >
-        ✅ Aprende Jugando | Sin Pantallas | Desarrolla Creatividad
-      </p>
-      <p>
-        Descubre 6 hábitats, 30+ animales fascinantes y diversión educativa
-        garantizada
-      </p>
-      <p style="font-weight: 600; font-size: 0.95rem">
-        Para niños de 3 a 9 años | Perfecto para Padres y Docentes
-      </p>
-    </header>
+        ">
+      ✅ Aprende Jugando | Sin Pantallas | Desarrolla Creatividad
+    </p>
+    <p>
+      Descubre 6 hábitats, 30+ animales fascinantes y diversión educativa
+      garantizada
+    </p>
+    <p style="font-weight: 600; font-size: 0.95rem">
+      Para niños de 3 a 9 años | Perfecto para Padres y Docentes
+    </p>
+  </header>
 
-    <div class="hero-card">
-      <div class="rating-text">
-        ⭐⭐⭐⭐⭐ 156 Familias Felices (4.9/5 Estrellas)
-      </div>
-      <div class="hero-carousel-container">
-        <div class="hero-carousel-track" id="heroCarouselTrack">
-          <div class="hero-carousel-slide">
-            <img
-              src="../assets/portada.jpg"
-              alt="Portada principal - Animales por Hábitat"
-            />
-          </div>
-          <div class="hero-carousel-slide">
-            <img
-              src="../assets/portada2.jpg"
-              alt="Vista interior - Contenido del libro"
-            />
-          </div>
-          <div class="hero-carousel-slide">
-            <img
-              src="../assets/diferencias.png"
-              alt="Actividad educativa - Encuentra las diferencias"
-            />
-          </div>
-          <div class="hero-carousel-slide">
-            <img
-              src="../assets/sopa-letras.png"
-              alt="Actividad educativa - Sopa de letras"
-            />
-          </div>
-          <div class="hero-carousel-slide">
-            <img
-              src="../assets/stikers.png"
-              alt="Stickers educativos para aprender"
-            />
-          </div>
+  <div class="hero-card">
+    <div class="rating-text">
+      ⭐⭐⭐⭐⭐ 156 Familias Felices (4.9/5 Estrellas)
+    </div>
+    <div class="hero-carousel-container">
+      <div class="hero-carousel-track" id="heroCarouselTrack">
+        <div class="hero-carousel-slide">
+          <img src="../assets/portada.jpg" alt="Portada principal" width="500" height="625" fetchpriority="high">
         </div>
-      </div>
-      <div class="price-tag">📚 Acceso ILIMITADO + Impresión de por Vida</div>
-      <div style="margin-top: 24px">
-        <a href="https://pay.hotmart.com/O103935436Y" class="cta-btn"
-          >🎁 OBTENER ACCESO AHORA - ¡DESCARGA EN 2 MIN!</a
-        >
-      </div>
-      <div class="guarantee-badge">
-        ✓ GARANTÍA 7 DÍAS: Satisfecho o Dinero Devuelto 100%
+        <div class="hero-carousel-slide">
+          <img src="../assets/portada2.jpg" alt="Vista interior" width="500" height="625" loading="lazy">
+        </div>
+        <div class="hero-carousel-slide">
+          <img src="../assets/diferencias.png" alt="Actividad diferencias" width="500" height="625" loading="lazy">
+        </div>
+        <div class="hero-carousel-slide">
+          <img src="../assets/sopa-letras.png" alt="Sopa de letras" width="500" height="625" loading="lazy">
+        </div>
+        <div class="hero-carousel-slide">
+          <img src="../assets/stikers.png" alt="Stickers educativos" width="500" height="625" loading="lazy">
+        </div>
       </div>
     </div>
+    <div class="price-tag">📚 Acceso ILIMITADO + Impresión de por Vida</div>
+    <div style="margin-top: 24px">
+      <a href="https://pay.hotmart.com/O103935436Y" class="cta-btn">🎁 OBTENER ACCESO AHORA - ¡DESCARGA EN 2 MIN!</a>
+    </div>
+    <div class="guarantee-badge">
+      ✓ GARANTÍA 7 DÍAS: Satisfecho o Dinero Devuelto 100%
+    </div>
+  </div>
 
-    <section>
-      <!-- BENEFICIOS PARA NIÑOS -->
-      <div class="card">
-        <h2>¿Por Qué tu Hijo lo Va a AMAR? 💚</h2>
-        <ul>
-          <li>
-            <strong>Diversión garantizada:</strong> 30+ animales increíbles para
-            colorear de forma libre
-          </li>
-          <li>
-            <strong>Aprende sin darse cuenta:</strong> Descubre hábitats
-            fascinantes mientras colorea
-          </li>
-          <li>
-            <strong>Libertad creativa total:</strong> Sin reglas, sin límites,
-            100% su imaginación
-          </li>
-          <li>
-            <strong>Siente logros reales:</strong> Cada página coloreada es un
-            éxito increíble
-          </li>
-          <li>
-            <strong>Entretenimiento de calidad:</strong> Contenido diseñado para
-            captar su atención completamente
-          </li>
-        </ul>
-      </div>
+  <section>
+    <!-- BENEFICIOS PARA NIÑOS -->
+    <div class="card">
+      <h2>¿Por Qué tu Hijo lo Va a AMAR? 💚</h2>
+      <ul>
+        <li>
+          <strong>Diversión garantizada:</strong> 30+ animales increíbles para
+          colorear de forma libre
+        </li>
+        <li>
+          <strong>Aprende sin darse cuenta:</strong> Descubre hábitats
+          fascinantes mientras colorea
+        </li>
+        <li>
+          <strong>Libertad creativa total:</strong> Sin reglas, sin límites,
+          100% su imaginación
+        </li>
+        <li>
+          <strong>Siente logros reales:</strong> Cada página coloreada es un
+          éxito increíble
+        </li>
+        <li>
+          <strong>Entretenimiento de calidad:</strong> Contenido diseñado para
+          captar su atención completamente
+        </li>
+      </ul>
+    </div>
 
-      <!-- HÁBITATS VISUAL -->
-      <div class="card">
-        <h2>Explora 6 Hábitats Fascinantes 🌍</h2>
-        <div class="habitats-showcase">
-          <div class="habitat-box">
-            <span class="emoji">🌲</span>
-            <span class="label">BOSQUE</span>
-          </div>
-          <div class="habitat-box">
-            <span class="emoji">🌊</span>
-            <span class="label">OCÉANO</span>
-          </div>
-          <div class="habitat-box">
-            <span class="emoji">🏜️</span>
-            <span class="label">DESIERTO</span>
-          </div>
-          <div class="habitat-box">
-            <span class="emoji">❄️</span>
-            <span class="label">POLO</span>
-          </div>
-          <div class="habitat-box">
-            <span class="emoji">🌾</span>
-            <span class="label">GRANJA</span>
-          </div>
-          <div class="habitat-box">
-            <span class="emoji">🌴</span>
-            <span class="label">SELVA</span>
-          </div>
+    <!-- HÁBITATS VISUAL -->
+    <div class="card">
+      <h2>Explora 6 Hábitats Fascinantes 🌍</h2>
+      <div class="habitats-showcase">
+        <div class="habitat-box">
+          <span class="emoji">🌲</span>
+          <span class="label">BOSQUE</span>
         </div>
-        <p
-          style="
+        <div class="habitat-box">
+          <span class="emoji">🌊</span>
+          <span class="label">OCÉANO</span>
+        </div>
+        <div class="habitat-box">
+          <span class="emoji">🏜️</span>
+          <span class="label">DESIERTO</span>
+        </div>
+        <div class="habitat-box">
+          <span class="emoji">❄️</span>
+          <span class="label">POLO</span>
+        </div>
+        <div class="habitat-box">
+          <span class="emoji">🌾</span>
+          <span class="label">GRANJA</span>
+        </div>
+        <div class="habitat-box">
+          <span class="emoji">🌴</span>
+          <span class="label">SELVA</span>
+        </div>
+      </div>
+      <p style="
             margin-top: 28px;
             background: #f0f8ff;
             padding: 20px;
             border-radius: 14px;
             border-left: 6px solid var(--orange);
             font-weight: 500;
-          "
-        >
-          <strong>Cada hábitat incluye:</strong> Animales reales con datos
-          curiosos + Dibujos para colorear + Actividades especiales
-        </p>
-      </div>
+          ">
+        <strong>Cada hábitat incluye:</strong> Animales reales con datos
+        curiosos + Dibujos para colorear + Actividades especiales
+      </p>
+    </div>
 
-      <!-- BENEFICIOS PARA PADRES -->
-      <div class="card">
-        <h2>¿Qué GANAS TÚ como Padre? 👨‍👩‍👧‍👦</h2>
-        <ul>
-          <li>
-            <strong>Tranquilidad total:</strong> Entretenimiento SEGURO,
-            educativo y sin publicidad molesta
-          </li>
-          <li>
-            <strong>Descanso de pantallas:</strong> Un alivio real y visible en
-            los ojos de tu hijo
-          </li>
-          <li>
-            <strong>Momentos familiares:</strong> Colorea junto a él y crea
-            conexiones especiales
-          </li>
-          <li>
-            <strong>Desarrollo comprobado:</strong> Mejora motricidad fina,
-            concentración y creatividad genuina
-          </li>
-          <li>
-            <strong>Recurso duradero:</strong> Lo usarán durante años, en casa y
-            en el colegio
-          </li>
-          <li>
-            <strong>Acceso completo:</strong> Todos tus hijos, impresiones
-            ilimitadas, PARA SIEMPRE
-          </li>
-        </ul>
-      </div>
+    <!-- BENEFICIOS PARA PADRES -->
+    <div class="card">
+      <h2>¿Qué GANAS TÚ como Padre? 👨‍👩‍👧‍👦</h2>
+      <ul>
+        <li>
+          <strong>Tranquilidad total:</strong> Entretenimiento SEGURO,
+          educativo y sin publicidad molesta
+        </li>
+        <li>
+          <strong>Descanso de pantallas:</strong> Un alivio real y visible en
+          los ojos de tu hijo
+        </li>
+        <li>
+          <strong>Momentos familiares:</strong> Colorea junto a él y crea
+          conexiones especiales
+        </li>
+        <li>
+          <strong>Desarrollo comprobado:</strong> Mejora motricidad fina,
+          concentración y creatividad genuina
+        </li>
+        <li>
+          <strong>Recurso duradero:</strong> Lo usarán durante años, en casa y
+          en el colegio
+        </li>
+        <li>
+          <strong>Acceso completo:</strong> Todos tus hijos, impresiones
+          ilimitadas, PARA SIEMPRE
+        </li>
+      </ul>
+    </div>
 
-      <!-- TESTIMONIOS -->
-      <div class="card">
-        <h2>¿Qué Dicen las Familias? 💬</h2>
-        <div class="testimonials">
-          <div class="testimonial">
-            "Mi hijo pasó las pantallas al olvido. Ahora colorea durante horas
-            sin aburrirse. ¡Increíble!"
-            <strong>— María, mamá de Sofía (6 años)</strong>
-          </div>
-          <div class="testimonial">
-            "En el colegio los niños piden más. Es un material educativo REAL
-            que funciona." <strong>— Antonio, maestro de primaria</strong>
-          </div>
-          <div class="testimonial">
-            "Mejor que cualquier juguete. Mi hijo lo recomendó a sus amigos.
-            Todos lo quieren." <strong>— Luis, papá de Pablo (7 años)</strong>
-          </div>
+    <!-- TESTIMONIOS -->
+    <div class="card">
+      <h2>¿Qué Dicen las Familias? 💬</h2>
+      <div class="testimonials">
+        <div class="testimonial">
+          "Mi hijo pasó las pantallas al olvido. Ahora colorea durante horas
+          sin aburrirse. ¡Increíble!"
+          <strong>— María, mamá de Sofía (6 años)</strong>
+        </div>
+        <div class="testimonial">
+          "En el colegio los niños piden más. Es un material educativo REAL
+          que funciona." <strong>— Antonio, maestro de primaria</strong>
+        </div>
+        <div class="testimonial">
+          "Mejor que cualquier juguete. Mi hijo lo recomendó a sus amigos.
+          Todos lo quieren." <strong>— Luis, papá de Pablo (7 años)</strong>
         </div>
       </div>
+    </div>
 
-      <!-- QUÉ INCLUYE -->
-      <div class="card">
-        <h2>¿Qué Incluye Exactamente? 📦</h2>
-        <ul>
-          <li>
-            📄 <strong>1 Ebook PDF de 80+ páginas</strong> listas para colorear
-            inmediatamente
-          </li>
-          <li>
-            🎨 <strong>30+ Animales increíbles</strong> dibujados
-            profesionalmente para niños
-          </li>
-          <li>
-            📚 <strong>Datos educativos fascinantes</strong> sobre cada animal y
-            su hábitat
-          </li>
-          <li>
-            🎯 <strong>Actividades extras especiales:</strong> Rompecabezas,
-            juegos de memoria, búsquedas
-          </li>
-          <li>
-            🖨️ <strong>Impresión ilimitada</strong> - Imprímelo tantas veces
-            como quieras
-          </li>
-          <li>
-            📱 <strong>Acceso digital</strong> - Colorea también en tablet, iPad
-            o computadora
-          </li>
-          <li>
-            ♻️ <strong>De por vida</strong> - Acceso permanente, sin
-            suscripciones mensuales escondidas
-          </li>
-        </ul>
-      </div>
+    <!-- QUÉ INCLUYE -->
+    <div class="card">
+      <h2>¿Qué Incluye Exactamente? 📦</h2>
+      <ul>
+        <li>
+          📄 <strong>1 Ebook PDF de 80+ páginas</strong> listas para colorear
+          inmediatamente
+        </li>
+        <li>
+          🎨 <strong>30+ Animales increíbles</strong> dibujados
+          profesionalmente para niños
+        </li>
+        <li>
+          📚 <strong>Datos educativos fascinantes</strong> sobre cada animal y
+          su hábitat
+        </li>
+        <li>
+          🎯 <strong>Actividades extras especiales:</strong> Rompecabezas,
+          juegos de memoria, búsquedas
+        </li>
+        <li>
+          🖨️ <strong>Impresión ilimitada</strong> - Imprímelo tantas veces
+          como quieras
+        </li>
+        <li>
+          📱 <strong>Acceso digital</strong> - Colorea también en tablet, iPad
+          o computadora
+        </li>
+        <li>
+          ♻️ <strong>De por vida</strong> - Acceso permanente, sin
+          suscripciones mensuales escondidas
+        </li>
+      </ul>
+    </div>
 
-      <!-- PRECIO Y VALOR -->
-      <div
-        class="card"
-        style="
+    <!-- PRECIO Y VALOR -->
+    <div class="card" style="
           background: linear-gradient(135deg, #f0f8ff, #f8f5ff);
           border-left: 8px solid var(--green);
-        "
-      >
-        <h2 style="color: var(--green)">El Mejor Precio Posible 💰</h2>
-        <div style="text-align: center; margin: 32px 0">
-          <div
-            style="font-size: 2.8rem; font-weight: 900; color: var(--orange)"
-          >
-            $6.99
-          </div>
-          <div
-            style="
+        ">
+      <h2 style="color: var(--green)">El Mejor Precio Posible 💰</h2>
+      <div style="text-align: center; margin: 32px 0">
+        <div style="font-size: 2.8rem; font-weight: 900; color: var(--orange)">
+          $6.99
+        </div>
+        <div style="
               font-size: 0.95rem;
               color: #999;
               text-decoration: line-through;
               margin: 8px 0;
-            "
-          >
-            Precio regular: $29.99
-          </div>
-          <div style="color: var(--green); font-weight: 900; font-size: 1.2rem">
-            ¡AHORRAS $23! (76% OFF)
-          </div>
+            ">
+          Precio regular: $29.99
         </div>
-        <p
-          style="
+        <div style="color: var(--green); font-weight: 900; font-size: 1.2rem">
+          ¡AHORRAS $23! (76% OFF)
+        </div>
+      </div>
+      <p style="
             text-align: center;
             font-weight: 700;
             color: #555;
             font-size: 1.05rem;
             margin: 24px 0;
-          "
-        >
-          Una inversión única para tiempo de calidad de aprendizaje.
-          <strong>Menos de un café.</strong>
-        </p>
-        <ul style="margin-top: 20px">
-          <li>
-            💳 Pago seguro único - Descarga INMEDIATA después de confirmar
-          </li>
-          <li>📚 Uso ilimitado para TODOS tus hijos</li>
-          <li>🔄 Acceso permanente - NUNCA expira</li>
-          <li>♻️ Sin suscripciones ocultas, solo un precio justo</li>
-        </ul>
-      </div>
+          ">
+        Una inversión única para tiempo de calidad de aprendizaje.
+        <strong>Menos de un café.</strong>
+      </p>
+      <ul style="margin-top: 20px">
+        <li>
+          💳 Pago seguro único - Descarga INMEDIATA después de confirmar
+        </li>
+        <li>📚 Uso ilimitado para TODOS tus hijos</li>
+        <li>🔄 Acceso permanente - NUNCA expira</li>
+        <li>♻️ Sin suscripciones ocultas, solo un precio justo</li>
+      </ul>
+    </div>
 
-      <!-- IMÁGENES PREVIEW -->
-      <div class="card" style="text-align: center">
-        <h2>Echa un Vistazo al Interior 👀</h2>
-        <div class="gallery-preview" style="margin-top: 28px">
-          <div
-            class="habitat-box"
-            style="
-              padding: 0;
-              overflow: hidden;
-              aspect-ratio: 9/16;
-              max-width: 280px;
-              margin: 0 auto;
-            "
-          >
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/1gTYStaUEy0?autoplay=1&mute=1&controls=0&loop=1&playlist=1gTYStaUEy0"
-              frameborder="0"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-              "
-              style="border-radius: 18px; display: block"
-            ></iframe>
-          </div>
-          <div class="habitat-box">
-            <img
-              src="../assets/portada2.jpg"
-              alt="Muestra 1"
-              style="width: 100%; border-radius: 14px; margin-bottom: 0"
-            />
-          </div>
-          <div class="habitat-box">
-            <img
-              src="../assets/diferencias.png"
-              alt="Muestra 2"
-              style="width: 100%; border-radius: 14px; margin-bottom: 0"
-            />
-          </div>
-          <div class="habitat-box">
-            <img
-              src="../assets/sopa-letras.png"
-              alt="Muestra 3"
-              style="width: 100%; border-radius: 14px; margin-bottom: 0"
-            />
-          </div>
-          <div class="habitat-box">
-            <img
-              src="../assets/stikers.png"
-              alt="Muestra 4"
-              style="width: 100%; border-radius: 14px; margin-bottom: 0"
-            />
-          </div>
+    <!-- IMÁGENES PREVIEW -->
+    <div class="card" style="text-align: center">
+      <h2>Echa un Vistazo al Interior 👀</h2>
+      <div class="gallery-preview" style="margin-top: 28px">
+        <div class="habitat-box"
+          style="padding: 0; overflow: hidden; aspect-ratio: 9/16; max-width: 280px; margin: 0 auto;">
+          <iframe width="100%" height="100%"
+            data-src="https://www.youtube.com/embed/1gTYStaUEy0?autoplay=1&mute=1&controls=0&loop=1&playlist=1gTYStaUEy0"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            style="border-radius: 18px; display: block" title="Video interior"></iframe>
+        </div>
+        <div class="habitat-box">
+          <img src="../assets/portada2.jpg" alt="Muestra 1" width="300" height="400" loading="lazy"
+            style="width: 100%; border-radius: 14px; margin-bottom: 0">
+        </div>
+        <div class="habitat-box">
+          <img src="../assets/diferencias.png" alt="Muestra 2" width="300" height="400" loading="lazy"
+            style="width: 100%; border-radius: 14px; margin-bottom: 0">
+        </div>
+        <div class="habitat-box">
+          <img src="../assets/sopa-letras.png" alt="Muestra 3" width="300" height="400" loading="lazy"
+            style="width: 100%; border-radius: 14px; margin-bottom: 0">
+        </div>
+        <div class="habitat-box">
+          <img src="../assets/stikers.png" alt="Muestra 4" width="300" height="400" loading="lazy"
+            style="width: 100%; border-radius: 14px; margin-bottom: 0">
         </div>
       </div>
+    </div>
 
-      <!-- CTA FINAL -->
-      <div class="final-cta-section">
-        <h2>🎓 Es Tu Momento AHORA</h2>
-        <p>
-          Dale a tu hijo el regalo que recordará: aprendizaje real, diversión
-          genuina y creatividad sin límites.
-        </p>
-        <a
-          href="https://pay.hotmart.com/O103935436Y"
-          class="cta-btn"
-          style="background: #fff; color: var(--orange); display: inline-block"
-        >
-          🎁 OBTENER ACCESO AHORA - ¡DESCARGA EN 2 MINUTOS!
-        </a>
-        <p
-          style="
+    <!-- CTA FINAL -->
+    <div class="final-cta-section">
+      <h2>🎓 Es Tu Momento AHORA</h2>
+      <p>
+        Dale a tu hijo el regalo que recordará: aprendizaje real, diversión
+        genuina y creatividad sin límites.
+      </p>
+      <a href="https://pay.hotmart.com/O103935436Y" class="cta-btn"
+        style="background: #fff; color: var(--orange); display: inline-block">
+        🎁 OBTENER ACCESO AHORA - ¡DESCARGA EN 2 MINUTOS!
+      </a>
+      <p style="
             font-size: 1.05rem;
             margin-top: 28px;
             border-top: 2px solid rgba(255, 255, 255, 0.3);
             padding-top: 20px;
-          "
-        >
-          ✅ GARANTÍA 7 DÍAS: Completamente satisfecho o tu dinero de vuelta.
-          Sin preguntas. <strong>Cero riesgo.</strong>
-        </p>
-      </div>
+          ">
+        ✅ GARANTÍA 7 DÍAS: Completamente satisfecho o tu dinero de vuelta.
+        Sin preguntas. <strong>Cero riesgo.</strong>
+      </p>
+    </div>
 
-      <!-- FAQ -->
-      <div class="faq">
-        <h2>❓ Preguntas Frecuentes</h2>
+    <!-- FAQ -->
+    <div class="faq">
+      <h2>❓ Preguntas Frecuentes</h2>
 
-        <div class="faq-item">
-          <div class="faq-question">
-            ¿Para qué edades exactamente es perfecto? <span>+</span>
-          </div>
-          <div class="faq-answer">
-            Ideal para niños de 3 a 9 años. Los más pequeños disfrutan con las
-            figuras grandes y coloridas. Los más mayores aprecian los datos
-            educativos sobre cada animal. Todos aprenden mientras se divierten.
-          </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Para qué edades exactamente es perfecto? <span>+</span>
         </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            ¿Es realmente ilimitado cuando dice "de por vida"? <span>+</span>
-          </div>
-          <div class="faq-answer">
-            Sí, 100% ilimitado. Paga una sola vez, acceso de por vida. Imprime
-            cuantas veces quieras para todos tus hijos, sin límites. Sin
-            suscripciones mensuales sorpresa.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            ¿Cómo recibo el libro después de comprar? <span>+</span>
-          </div>
-          <div class="faq-answer">
-            Descarga instantánea en PDF. Lo recibes en tu email en 2 minutos
-            exactos. Puedes comenzar a imprimir y que tu hijo coloree
-            inmediatamente.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            ¿Funciona para uso educativo en colegios? <span>+</span>
-          </div>
-          <div class="faq-answer">
-            Absolutamente. Muchos maestros lo usan en clase. Es educativo,
-            completamente seguro y sin violencia. Incluye licencia para uso
-            educativo institucional.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            ¿Qué pasa si no me gusta después de comprar? <span>+</span>
-          </div>
-          <div class="faq-answer">
-            Garantía 100% satisfecho. Si en 30 días no estás completamente
-            feliz, devolvemos tu dinero sin preguntas. Cero riesgo, solo
-            confianza.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            ¿Necesita internet para usarlo? <span>+</span>
-          </div>
-          <div class="faq-answer">
-            No. Es un PDF que descargas. Una vez descargado, funciona totalmente
-            sin conexión a internet. Perfecto para cualquier lugar.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            ¿Puedo usarlo en tablet o iPad? <span>+</span>
-          </div>
-          <div class="faq-answer">
-            Sí, funciona en cualquier dispositivo que lea PDF: computadora,
-            tablet, iPad, teléfono. Incluso hay aplicaciones especiales para
-            colorear digitalmente.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            ¿Tengo más preguntas, cómo me ayudan? <span>+</span>
-          </div>
-          <div class="faq-answer">
-            Contáctanos en soporte@tulibroeducativo.com. Respondemos en menos de
-            24 horas. Tu satisfacción es nuestra prioridad número uno.
-          </div>
+        <div class="faq-answer">
+          Ideal para niños de 3 a 9 años. Los más pequeños disfrutan con las
+          figuras grandes y coloridas. Los más mayores aprecian los datos
+          educativos sobre cada animal. Todos aprenden mientras se divierten.
         </div>
       </div>
 
-      <!-- FORMULARIO DE PAGO HOTMART -->
-      <div style="margin-top: 48px; text-align: center">
-        <iframe
-          src="https://pay.hotmart.com/O103935436Y"
-          width="100%"
-          height="800"
-          frameborder="0"
-          style="
-            border: none;
-            border-radius: 24px;
-            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-          "
-          title="Formulario de pago Hotmart"
-        ></iframe>
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Es realmente ilimitado cuando dice "de por vida"? <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Sí, 100% ilimitado. Paga una sola vez, acceso de por vida. Imprime
+          cuantas veces quieras para todos tus hijos, sin límites. Sin
+          suscripciones mensuales sorpresa.
+        </div>
       </div>
-    </section>
 
-    <footer>
-      © 2026 – Animales por Hábitat<br />
-      Educación con amor, creatividad y conciencia 💚<br />
-      <a href="mailto:soporte@tulibroeducativo.com">📧 Contacto</a> | Garantía 7
-      días de satisfacción | <a href="#">Política de Privacidad</a>
-    </footer>
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Cómo recibo el libro después de comprar? <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Descarga instantánea en PDF. Lo recibes en tu email en 2 minutos
+          exactos. Puedes comenzar a imprimir y que tu hijo coloree
+          inmediatamente.
+        </div>
+      </div>
 
-    <script>
-      // HERO CAROUSEL FUNCTIONALITY - AUTO ADVANCE
-      let heroCurrentSlide = 0;
-      const heroSlides = document.querySelectorAll(".hero-carousel-slide");
-      const heroTotalSlides = heroSlides.length;
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Funciona para uso educativo en colegios? <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Absolutamente. Muchos maestros lo usan en clase. Es educativo,
+          completamente seguro y sin violencia. Incluye licencia para uso
+          educativo institucional.
+        </div>
+      </div>
 
-      function updateHeroCarousel() {
-        const track = document.getElementById("heroCarouselTrack");
-        track.style.transform = `translateX(-${heroCurrentSlide * 100}%)`;
-      }
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Qué pasa si no me gusta después de comprar? <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Garantía 100% satisfecho. Si en 30 días no estás completamente
+          feliz, devolvemos tu dinero sin preguntas. Cero riesgo, solo
+          confianza.
+        </div>
+      </div>
 
-      function autoAdvanceHeroCarousel() {
-        heroCurrentSlide = (heroCurrentSlide + 1) % heroTotalSlides;
-        updateHeroCarousel();
-      }
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Necesita internet para usarlo? <span>+</span>
+        </div>
+        <div class="faq-answer">
+          No. Es un PDF que descargas. Una vez descargado, funciona totalmente
+          sin conexión a internet. Perfecto para cualquier lugar.
+        </div>
+      </div>
 
-      // Initialize hero carousel and set auto-advance
-      document.addEventListener("DOMContentLoaded", () => {
-        updateHeroCarousel();
-        // Cambiar imagen cada 5 segundos infinitamente
-        setInterval(autoAdvanceHeroCarousel, 5000);
-      });
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Puedo usarlo en tablet o iPad? <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Sí, funciona en cualquier dispositivo que lea PDF: computadora,
+          tablet, iPad, teléfono. Incluso hay aplicaciones especiales para
+          colorear digitalmente.
+        </div>
+      </div>
 
-      // FAQ Interactivo
-      document.querySelectorAll(".faq-question").forEach((q) => {
-        q.addEventListener("click", () => {
-          const answer = q.nextElementSibling;
-          const isOpen = answer.style.display === "block";
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Tengo más preguntas, cómo me ayudan? <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Contáctanos en soporte@tulibroeducativo.com. Respondemos en menos de
+          24 horas. Tu satisfacción es nuestra prioridad número uno.
+        </div>
+      </div>
+    </div>
 
-          document
-            .querySelectorAll(".faq-answer")
-            .forEach((a) => (a.style.display = "none"));
-          document
-            .querySelectorAll(".faq-question span")
-            .forEach((s) => (s.textContent = "+"));
+    <!-- FORMULARIO DE PAGO HOTMART -->
+    <div style="margin-top: 48px; text-align: center">
+      <iframe data-src="https://pay.hotmart.com/O103935436Y" width="100%" height="800" frameborder="0"
+        style="border: none; border-radius: 24px; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);"
+        title="Formulario de pago Hotmart"></iframe>
+    </div>
+  </section>
 
-          if (!isOpen) {
-            answer.style.display = "block";
-            q.querySelector("span").textContent = "−";
-          }
-        });
-      });
+  <footer>
+    © 2026 – Animales por Hábitat<br />
+    Educación con amor, creatividad y conciencia 💚<br />
+    <a href="mailto:soporte@tulibroeducativo.com">📧 Contacto</a> | Garantía 7
+    días de satisfacción | <a href="#">Política de Privacidad</a>
+  </footer>
 
-      // Contador dinámico
-      const counterElement = document.querySelector("#counter");
-      const initialCount = parseInt(counterElement.textContent);
+  <div class="fixed-bottom-btn">
+    <a href="https://pay.hotmart.com/O103935436Y" target="_blank" rel="noopener">
+      🎁 OBTENER ACCESO AHORA - ¡DESCARGA EN 2 MIN!
+    </a>
+  </div>
+  <script src="scripts.js" defer></script>
+</body>
 
-      setInterval(
-        () => {
-          const current = parseInt(counterElement.textContent);
-          if (Math.random() > 0.3) {
-            counterElement.textContent = current + 1;
-          }
-        },
-        8000 + Math.random() * 12000,
-      );
-    </script>
-  </body>
 </html>
